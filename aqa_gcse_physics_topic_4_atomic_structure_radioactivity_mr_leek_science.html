@@ -1,0 +1,3162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AQA GCSE Physics — Topic 4: Atomic Structure &amp; Radioactivity | Mr Leek Science</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ==========================================================================
+       MR LEEK SCIENCE — ROYAL / SAPPHIRE BLUE DESIGN TOKENS (PHYSICS TOPIC 4)
+       ========================================================================== */
+    :root {
+      --navy-950: #09152b;
+      --navy-900: #0f172a;
+      --blue-900: #1e3a8a;
+      --blue-800: #1e40af;
+      --blue-700: #1d4ed8;
+      --blue-600: #2563eb;
+      --blue-500: #3b82f6;
+      --blue-400: #60a5fa;
+
+      --blue-200: #bfdbfe;
+      --blue-100: #dbeafe;
+      --blue-50: #eff6ff;
+      --blue-tint: #f8fbff;
+
+      --bg-page: #f8fafc;
+      --slate-900: #0f172a;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-500: #64748b;
+      --slate-400: #94a3b8;
+      --slate-300: #cbd5e1;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+
+      --sky-100: #e0f2fe;
+      --sky-700: #0369a1;
+      --green-chip-bg: #dcfce7;
+      --green-chip-fg: #15803d;
+      --purple-100: #f3e8ff;
+      --purple-700: #7e22ce;
+
+      --emerald-700: #047857;
+      --emerald-600: #059669;
+      --emerald-100: #d1fae5;
+      --emerald-50: #ecfdf5;
+
+      --amber-700: #b45309;
+      --amber-600: #d97706;
+      --amber-100: #fef3c7;
+      --amber-50: #fffbeb;
+
+      --rose-700: #be123c;
+      --rose-600: #dc2626;
+      --rose-500: #ef4444;
+      --rose-200: #fecaca;
+      --rose-100: #fee2e2;
+      --rose-50: #fef2f2;
+
+      --shadow-shell: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --shadow-cta: 0 6px 18px -2px rgba(29, 78, 216, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--slate-900);
+      min-height: 100vh;
+      padding: 1.5rem 1rem 3rem;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, .heading-font {
+      font-family: "Plus Jakarta Sans", "Inter", sans-serif;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* Nuclear / Isotope Stacked Subscript & Superscript Notation */
+    .nuc {
+      display: inline-flex;
+      flex-direction: column;
+      vertical-align: middle;
+      text-align: right;
+      line-height: 1.02;
+      font-size: 0.74em;
+      font-weight: 800;
+      margin-right: 2px;
+      transform: translateY(-1px);
+    }
+
+    /* ==========================================================================
+       CENTERED MAIN CARD CONTAINER
+       ========================================================================== */
+    .app-container {
+      max-width: 920px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 16px;
+      border: 1px solid var(--slate-200);
+      box-shadow: var(--shadow-shell);
+      overflow: hidden;
+    }
+
+    /* ==========================================================================
+       TOP ROYAL / SAPPHIRE BLUE BANNER HEADER
+       ========================================================================== */
+    .banner-header {
+      background: linear-gradient(135deg, #09152b 0%, #1e3a8a 100%);
+      padding: 32px 36px;
+      color: #ffffff;
+      position: relative;
+    }
+
+    .banner-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .spec-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 999px;
+      padding: 5px 14px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue-200);
+    }
+
+    .brand-tag {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.92);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .banner-title {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.22;
+      letter-spacing: -0.015em;
+      margin-bottom: 8px;
+    }
+
+    .banner-subtitle {
+      font-size: 0.94rem;
+      color: rgba(255, 255, 255, 0.88);
+      max-width: 800px;
+      line-height: 1.52;
+      font-weight: 400;
+    }
+
+    /* ==========================================================================
+       WHITE FORM BODY
+       ========================================================================== */
+    .card-body {
+      padding: 28px 36px 36px;
+    }
+
+    .section-block {
+      margin-bottom: 26px;
+    }
+
+    /* Row 1: Student Name & Email Address */
+    .input-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .field-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .field-label {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--slate-800);
+      margin-bottom: 8px;
+    }
+
+    .field-label .req-star {
+      color: var(--blue-700);
+      margin-left: 2px;
+    }
+
+    .field-label .opt-muted {
+      color: var(--slate-400);
+      font-weight: 500;
+      margin-left: 3px;
+    }
+
+    .text-input {
+      width: 100%;
+      padding: 12px 15px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--slate-900);
+      background: #ffffff;
+      border: 1.5px solid var(--slate-300);
+      border-radius: 12px;
+      transition: border-color 0.16s ease, box-shadow 0.16s ease;
+    }
+
+    .text-input::placeholder {
+      color: var(--slate-400);
+    }
+
+    .text-input:focus {
+      outline: none;
+      border-color: var(--blue-500);
+      box-shadow: 0 0 0 3.5px rgba(59, 130, 246, 0.2);
+    }
+
+    .text-input.input-error {
+      border-color: var(--rose-500);
+      background-color: var(--rose-50);
+      box-shadow: 0 0 0 3.5px rgba(239, 68, 68, 0.16);
+      animation: shakeInput 0.34s ease;
+    }
+
+    .error-hint {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--rose-600);
+      margin-top: 5px;
+    }
+
+    @keyframes shakeInput {
+      0%, 100% { transform: translateX(0); }
+      20% { transform: translateX(-6px); }
+      40% { transform: translateX(6px); }
+      60% { transform: translateX(-4px); }
+      80% { transform: translateX(4px); }
+    }
+
+    /* Section Header Bar */
+    .section-header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .section-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--slate-900);
+    }
+
+    .selected-tier-pill {
+      background: var(--blue-50);
+      border: 1px solid var(--blue-200);
+      color: var(--blue-800);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+    }
+
+    .avail-count-text {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--slate-500);
+    }
+
+    /* Row 2: 3-Column Tier Selection Grid */
+    .tier-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .tier-card {
+      background: #ffffff;
+      border: 2px solid var(--slate-200);
+      border-radius: 16px;
+      padding: 18px 18px 20px;
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.18s ease;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .tier-card:hover {
+      border-color: var(--slate-300);
+      background: #fcfcfd;
+    }
+
+    .tier-card.selected {
+      border-color: var(--blue-700);
+      background: var(--blue-50);
+      box-shadow: 0 4px 14px rgba(29, 78, 216, 0.11);
+    }
+
+    .tier-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .spec-chip {
+      font-size: 0.69rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .chip-blue {
+      background: var(--sky-100);
+      color: var(--sky-700);
+    }
+
+    .chip-green {
+      background: var(--green-chip-bg);
+      color: var(--green-chip-fg);
+    }
+
+    .chip-purple {
+      background: var(--purple-100);
+      color: var(--purple-700);
+    }
+
+    .radio-circle {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 2px solid var(--slate-300);
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.16s ease;
+      flex-shrink: 0;
+    }
+
+    .radio-circle svg {
+      width: 13px;
+      height: 13px;
+      stroke: var(--slate-300);
+      stroke-width: 2.8;
+      fill: none;
+    }
+
+    .tier-card.selected .radio-circle {
+      background: var(--blue-700);
+      border-color: var(--blue-700);
+    }
+
+    .tier-card.selected .radio-circle svg {
+      stroke: #ffffff;
+    }
+
+    .tier-card-title {
+      font-size: 1.08rem;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin-bottom: 8px;
+    }
+
+    .tier-card-desc {
+      font-size: 0.83rem;
+      color: var(--slate-600);
+      line-height: 1.52;
+    }
+
+    /* Row 3: 2-Column Quiz Focus Grid */
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .focus-card {
+      background: #ffffff;
+      border: 2px solid var(--slate-200);
+      border-radius: 16px;
+      padding: 16px 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      text-align: left;
+      transition: all 0.18s ease;
+    }
+
+    .focus-card:hover {
+      border-color: var(--slate-300);
+      background: #fcfcfd;
+    }
+
+    .focus-card.selected {
+      border-color: var(--blue-700);
+      background: var(--blue-50);
+      box-shadow: 0 4px 14px rgba(29, 78, 216, 0.11);
+    }
+
+    .focus-icon-box {
+      width: 42px;
+      height: 42px;
+      border-radius: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+      transition: all 0.18s ease;
+    }
+
+    .focus-icon-blue {
+      background: var(--blue-700);
+      color: #ffffff;
+    }
+
+    .focus-icon-amber {
+      background: var(--amber-100);
+      color: var(--amber-700);
+    }
+
+    .focus-card.selected .focus-icon-amber {
+      background: var(--blue-700);
+      color: #ffffff;
+    }
+
+    .focus-content {
+      flex: 1;
+    }
+
+    .focus-title {
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .focus-check {
+      color: var(--blue-700);
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .focus-desc {
+      font-size: 0.82rem;
+      color: var(--slate-600);
+      line-height: 1.48;
+    }
+
+    /* Row 4: Number of Questions 5-Column Grid */
+    .count-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+
+    .count-btn {
+      background: #ffffff;
+      border: 1.5px solid var(--slate-200);
+      border-radius: 12px;
+      padding: 13px 10px;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--slate-800);
+      cursor: pointer;
+      transition: all 0.16s ease;
+    }
+
+    .count-btn:hover:not(.active) {
+      border-color: var(--slate-300);
+      background: var(--slate-50);
+    }
+
+    .count-btn.active {
+      background: var(--blue-700);
+      border-color: var(--blue-700);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(29, 78, 216, 0.28);
+    }
+
+    .cap-notice {
+      margin-top: 9px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--amber-700);
+      background: var(--amber-50);
+      border: 1px solid #fde68a;
+      border-radius: 10px;
+      padding: 7px 12px;
+    }
+
+    /* Divider + Bottom Full-Width CTA */
+    .cta-divider {
+      border: none;
+      border-top: 1px solid var(--slate-200);
+      margin: 26px 0 22px;
+    }
+
+    .btn-start-cta {
+      width: 100%;
+      background: var(--blue-700);
+      color: #ffffff;
+      border: none;
+      border-radius: 12px;
+      padding: 16px 24px;
+      font-family: inherit;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: var(--shadow-cta);
+      transition: background 0.18s ease, transform 0.15s ease;
+    }
+
+    .btn-start-cta:hover {
+      background: var(--blue-600);
+      transform: translateY(-1px);
+    }
+
+    /* ==========================================================================
+       SCREEN 2: ACTIVE QUIZ INTERFACE
+       ========================================================================== */
+    .quiz-hud {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .hud-badges {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .hud-pill-brand {
+      background: var(--navy-950);
+      color: #ffffff;
+      font-size: 0.74rem;
+      font-weight: 800;
+      padding: 5px 12px;
+      border-radius: 999px;
+      letter-spacing: 0.02em;
+    }
+
+    .hud-pill-dark {
+      background: var(--blue-900);
+      color: #ffffff;
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    .hud-pill-blue {
+      background: var(--blue-50);
+      color: var(--blue-800);
+      border: 1px solid var(--blue-200);
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    .hud-pill-amber {
+      background: var(--amber-100);
+      color: var(--amber-700);
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    .hud-stats {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hud-score-badge {
+      background: var(--emerald-50);
+      color: var(--emerald-700);
+      border: 1px solid #a7f3d0;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 11px;
+      border-radius: 999px;
+    }
+
+    .hud-q-counter {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--slate-700);
+    }
+
+    .hud-change-btn {
+      background: #ffffff;
+      color: var(--slate-700);
+      border: 1.5px solid var(--slate-300);
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-family: inherit;
+      font-size: 0.76rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .hud-change-btn:hover {
+      border-color: var(--blue-700);
+      color: var(--blue-700);
+      background: var(--blue-50);
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 8px;
+      background: var(--slate-100);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 22px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--blue-800), var(--blue-500));
+      border-radius: 999px;
+      transition: width 0.3s ease;
+    }
+
+    .question-box {
+      background: var(--blue-50);
+      border: 1.5px solid var(--blue-200);
+      border-radius: 16px;
+      padding: 20px 22px;
+      margin-bottom: 18px;
+    }
+
+    .q-meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .q-kicker {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--blue-800);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .rp-badge {
+      background: var(--amber-100);
+      color: var(--amber-700);
+      border: 1px solid #fcd34d;
+      font-size: 0.68rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 999px;
+      letter-spacing: 0.04em;
+    }
+
+    .kbd-tip {
+      font-size: 0.73rem;
+      color: var(--slate-500);
+      font-weight: 500;
+    }
+
+    .q-stem {
+      font-size: clamp(1.05rem, 2.1vw, 1.2rem);
+      font-weight: 700;
+      color: var(--slate-900);
+      line-height: 1.52;
+    }
+
+    .q-formula-box {
+      margin-top: 12px;
+      background: #ffffff;
+      border: 1px solid var(--blue-200);
+      border-left: 4px solid var(--blue-700);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-family: "Plus Jakarta Sans", "Inter", monospace;
+      font-size: 0.94rem;
+      font-weight: 700;
+      color: var(--blue-900);
+      line-height: 1.55;
+      overflow-x: auto;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 6px;
+      font-family: "Inter", sans-serif;
+      font-size: 0.84rem;
+    }
+
+    .data-table th, .data-table td {
+      border: 1px solid var(--blue-200);
+      padding: 6px 10px;
+      text-align: center;
+    }
+
+    .data-table th {
+      background: var(--blue-50);
+      color: var(--blue-900);
+      font-weight: 700;
+    }
+
+    .data-table td {
+      background: #ffffff;
+      color: var(--slate-800);
+      font-weight: 600;
+    }
+
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      margin-bottom: 18px;
+    }
+
+    .opt-btn {
+      width: 100%;
+      text-align: left;
+      background: #ffffff;
+      border: 2px solid var(--slate-200);
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-family: inherit;
+      font-size: 0.96rem;
+      font-weight: 500;
+      color: var(--slate-800);
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      transition: all 0.15s ease;
+    }
+
+    .opt-btn:hover:not(:disabled) {
+      border-color: var(--blue-600);
+      background: var(--blue-50);
+    }
+
+    .opt-btn:disabled {
+      cursor: default;
+    }
+
+    .opt-letter {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: var(--slate-100);
+      color: var(--slate-700);
+      font-size: 0.82rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .opt-btn.correct {
+      border-color: var(--emerald-600);
+      background: var(--emerald-50);
+      color: var(--slate-900);
+    }
+
+    .opt-btn.correct .opt-letter {
+      background: var(--emerald-600);
+      color: #ffffff;
+    }
+
+    .opt-btn.incorrect {
+      border-color: var(--rose-600);
+      background: var(--rose-50);
+      color: var(--rose-700);
+    }
+
+    .opt-btn.incorrect .opt-letter {
+      background: var(--rose-600);
+      color: #ffffff;
+    }
+
+    .opt-btn.dimmed {
+      opacity: 0.55;
+    }
+
+    .feedback-panel {
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin-bottom: 18px;
+      animation: fadeSlide 0.22s ease;
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .feedback-panel.fb-pass {
+      background: var(--emerald-50);
+      border: 1px solid #a7f3d0;
+      border-left: 5px solid var(--emerald-600);
+    }
+
+    .feedback-panel.fb-fail {
+      background: var(--rose-50);
+      border: 1px solid var(--rose-200);
+      border-left: 5px solid var(--rose-600);
+    }
+
+    .fb-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .fb-status {
+      font-weight: 800;
+      font-size: 0.98rem;
+    }
+
+    .fb-pass .fb-status { color: var(--emerald-700); }
+    .fb-fail .fb-status { color: var(--rose-600); }
+
+    .fb-chip {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--slate-700);
+      border: 1px solid var(--slate-200);
+    }
+
+    .fb-text {
+      font-size: 0.91rem;
+      color: var(--slate-800);
+      line-height: 1.56;
+    }
+
+    .quiz-bottom-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding-top: 14px;
+      border-top: 1px solid var(--slate-200);
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: var(--slate-700);
+      border: 1.5px solid var(--slate-300);
+      border-radius: 12px;
+      padding: 11px 18px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.16s ease;
+    }
+
+    .btn-secondary:hover {
+      background: var(--slate-50);
+      border-color: var(--slate-400);
+    }
+
+    .btn-primary-sm {
+      background: var(--blue-700);
+      color: #ffffff;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 22px;
+      font-family: inherit;
+      font-size: 0.94rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(29, 78, 216, 0.25);
+      transition: background 0.16s ease;
+    }
+
+    .btn-primary-sm:hover {
+      background: var(--blue-600);
+    }
+
+    /* ==========================================================================
+       SCREEN 3: DIAGNOSTIC RESULTS DASHBOARD
+       ========================================================================== */
+    .report-hero-box {
+      background: var(--blue-50);
+      border: 1.5px solid var(--blue-200);
+      border-radius: 16px;
+      padding: 24px 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .report-student-line {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--blue-800);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 6px;
+    }
+
+    .report-score-row {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .report-pct {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: clamp(2.5rem, 5vw, 3.3rem);
+      font-weight: 800;
+      color: var(--blue-700);
+      line-height: 1;
+    }
+
+    .report-fraction {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--slate-600);
+    }
+
+    .grade-pill {
+      display: inline-block;
+      background: var(--blue-900);
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    .report-summary-msg {
+      font-size: 0.93rem;
+      color: var(--slate-700);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .report-btn-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 26px;
+    }
+
+    .mastery-section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1.5px solid var(--slate-200);
+    }
+
+    .mastery-section-head h3 {
+      font-size: 1.05rem;
+      color: var(--slate-900);
+    }
+
+    .legend-row {
+      display: flex;
+      gap: 8px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      flex-wrap: wrap;
+    }
+
+    .tag-g { background: var(--emerald-50); color: var(--emerald-700); padding: 3px 9px; border-radius: 999px; }
+    .tag-a { background: var(--amber-50); color: var(--amber-700); padding: 3px 9px; border-radius: 999px; }
+    .tag-r { background: var(--rose-50); color: var(--rose-600); padding: 3px 9px; border-radius: 999px; }
+
+    .mastery-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .mastery-item {
+      border: 1.5px solid var(--slate-200);
+      border-radius: 14px;
+      padding: 14px 16px;
+      background: #ffffff;
+    }
+
+    .mastery-item-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
+    .mastery-name {
+      font-weight: 700;
+      font-size: 0.94rem;
+      color: var(--slate-900);
+    }
+
+    .mastery-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .status-chip {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 999px;
+    }
+
+    .sc-strong { background: var(--emerald-100); color: var(--emerald-700); }
+    .sc-dev { background: var(--amber-100); color: var(--amber-700); }
+    .sc-weak { background: var(--rose-100); color: var(--rose-600); }
+
+    .mastery-bar-track {
+      width: 100%;
+      height: 8px;
+      background: var(--slate-100);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 7px;
+    }
+
+    .mastery-bar-fill {
+      height: 100%;
+      border-radius: 999px;
+    }
+
+    .fill-g { background: var(--emerald-600); }
+    .fill-a { background: var(--amber-600); }
+    .fill-r { background: var(--rose-600); }
+
+    .mastery-tip {
+      font-size: 0.82rem;
+      color: var(--slate-600);
+      line-height: 1.5;
+    }
+
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .review-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .review-card {
+      border: 1.5px solid var(--slate-200);
+      border-left: 5px solid var(--slate-400);
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+
+    .review-card.rc-ok { border-left-color: var(--emerald-600); }
+    .review-card.rc-bad { border-left-color: var(--rose-600); }
+
+    .rc-kicker {
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--blue-800);
+      margin-bottom: 4px;
+    }
+
+    .rc-q {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--slate-900);
+      margin-bottom: 6px;
+    }
+
+    .rc-ans {
+      font-size: 0.86rem;
+      margin-bottom: 3px;
+    }
+
+    .rc-exp {
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px dashed var(--slate-200);
+      font-size: 0.84rem;
+      color: var(--slate-700);
+      line-height: 1.52;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--slate-400);
+      margin-top: 1.5rem;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 820px) {
+      .tier-grid {
+        grid-template-columns: 1fr;
+      }
+      .focus-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 0.75rem 0.65rem 2rem;
+      }
+      .banner-header {
+        padding: 24px 20px;
+      }
+      .card-body {
+        padding: 20px 18px 26px;
+      }
+      .input-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .count-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .kbd-tip {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- ======================================================================
+         ROYAL / SAPPHIRE BLUE HEADER BANNER
+         ====================================================================== -->
+    <header class="banner-header">
+      <div class="banner-top-row">
+        <span class="spec-pill">TOPIC 4 &bull; PAPER 1 REVISION (8463 &amp; 8464)</span>
+        <span class="brand-tag">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#bfdbfe" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="2.2"></circle>
+            <ellipse cx="12" cy="12" rx="9.5" ry="3.8" transform="rotate(30 12 12)"></ellipse>
+            <ellipse cx="12" cy="12" rx="9.5" ry="3.8" transform="rotate(-30 12 12)"></ellipse>
+            <ellipse cx="12" cy="12" rx="9.5" ry="3.8" transform="rotate(90 12 12)"></ellipse>
+          </svg>
+          Mr Leek Science
+        </span>
+      </div>
+      <h1 id="banner-main-title" class="banner-title">Configure Your Atomic Structure &amp; Radioactivity Quiz</h1>
+      <p id="banner-main-sub" class="banner-subtitle">Enter your name, choose your tier, select either all Topic 4 content or Calculations, Equations &amp; Half-Life only, and pick your question count.</p>
+    </header>
+
+    <!-- ======================================================================
+         VIEW 1: CONFIGURATION SCREEN
+         ====================================================================== -->
+    <main id="view-config" class="card-body">
+      <!-- Row 1: Student Name & Email Address -->
+      <div class="section-block input-grid">
+        <div class="field-group">
+          <label for="student-name" class="field-label">Student Name <span class="req-star">*</span></label>
+          <input type="text" id="student-name" class="text-input" placeholder="Enter your full name" autocomplete="name" />
+          <span id="name-error-msg" class="error-hint hidden">Please enter your name before starting the quiz.</span>
+        </div>
+
+        <div class="field-group">
+          <label for="student-email" class="field-label">Email Address <span class="opt-muted">(Optional)</span></label>
+          <input type="email" id="student-email" class="text-input" placeholder="e.g. student@school.co.uk" autocomplete="email" />
+        </div>
+      </div>
+
+      <!-- Row 2: Select Tier / Pathway -->
+      <div class="section-block">
+        <div class="section-header-bar">
+          <span class="section-title">Select Tier / Pathway</span>
+          <span id="selected-tier-badge" class="selected-tier-pill">Higher Tier Selected</span>
+        </div>
+
+        <div class="tier-grid" role="radiogroup" aria-label="Select Tier or Pathway">
+          <!-- Foundation Tier -->
+          <div class="tier-card" id="tier-card-foundation" role="radio" aria-checked="false" tabindex="0" onclick="selectTier('foundation')" onkeydown="if(event.key==='Enter'||event.key===' ')selectTier('foundation')">
+            <div class="tier-card-top">
+              <span class="spec-chip chip-blue">COMBINED 8464</span>
+              <span class="radio-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+            </div>
+            <div class="tier-card-title">Foundation Tier</div>
+            <p class="tier-card-desc">Atomic structure, isotopes, plum pudding &amp; Rutherford models, alpha/beta/gamma properties, nuclear decay equations, half-life graphs, and contamination vs. irradiation (Grades 1–5).</p>
+          </div>
+
+          <!-- Higher Tier (Default Selected) -->
+          <div class="tier-card selected" id="tier-card-higher" role="radio" aria-checked="true" tabindex="0" onclick="selectTier('higher')" onkeydown="if(event.key==='Enter'||event.key===' ')selectTier('higher')">
+            <div class="tier-card-top">
+              <span class="spec-chip chip-green">COMBINED 8464</span>
+              <span class="radio-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+            </div>
+            <div class="tier-card-title">Higher Tier</div>
+            <p class="tier-card-desc">Includes multi-step half-life &amp; net decline ratio calculations (e.g. 1:8, 1:16), background radiation correction, and detailed nuclear equation balancing (Grades 4–9).</p>
+          </div>
+
+          <!-- Separate Physics -->
+          <div class="tier-card" id="tier-card-separate" role="radio" aria-checked="false" tabindex="0" onclick="selectTier('separate')" onkeydown="if(event.key==='Enter'||event.key===' ')selectTier('separate')">
+            <div class="tier-card-top">
+              <span class="spec-chip chip-purple">TRIPLE 8463</span>
+              <span class="radio-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+            </div>
+            <div class="tier-card-title">Separate Physics</div>
+            <p class="tier-card-desc">Full 8463 content including background radiation sources &amp; sieverts (Sv), medical tracers &amp; radiotherapy, nuclear fission chain reactions, and nuclear fusion in stars (Grades 1–9).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 3: Quiz Focus -->
+      <div class="section-block">
+        <div class="section-header-bar">
+          <span class="section-title">Quiz Focus</span>
+        </div>
+
+        <div class="focus-grid" role="radiogroup" aria-label="Quiz Focus">
+          <!-- Option 1: All Topics -->
+          <div class="focus-card selected" id="focus-card-all" role="radio" aria-checked="true" tabindex="0" onclick="selectFocus('all')" onkeydown="if(event.key==='Enter'||event.key===' ')selectFocus('all')">
+            <div class="focus-icon-box focus-icon-blue" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
+            <div class="focus-content">
+              <div class="focus-title">
+                <span>All Atomic Structure &amp; Radioactivity Topics</span>
+                <span id="focus-check-all" class="focus-check">&#10003;</span>
+              </div>
+              <p class="focus-desc">Covers atomic models, isotopes, &alpha;/&beta;/&gamma;/n radiation, nuclear equations, half-life, contamination vs. irradiation, fission &amp; fusion.</p>
+            </div>
+          </div>
+
+          <!-- Option 2: Calculations, Equations & Half-Life Only -->
+          <div class="focus-card" id="focus-card-practicals" role="radio" aria-checked="false" tabindex="0" onclick="selectFocus('practicals')" onkeydown="if(event.key==='Enter'||event.key===' ')selectFocus('practicals')">
+            <div class="focus-icon-box focus-icon-amber" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                <line x1="8" y1="6" x2="16" y2="6"></line>
+                <line x1="8" y1="11" x2="10" y2="11"></line>
+                <line x1="14" y1="11" x2="16" y2="11"></line>
+                <line x1="8" y1="16" x2="10" y2="16"></line>
+                <line x1="14" y1="16" x2="16" y2="16"></line>
+              </svg>
+            </div>
+            <div class="focus-content">
+              <div class="focus-title">
+                <span>Calculations, Equations &amp; Half-Life Only</span>
+                <span id="focus-check-practicals" class="focus-check hidden">&#10003;</span>
+              </div>
+              <p class="focus-desc">Focused quantitative drill: balancing &alpha;/&beta;/&gamma;/n nuclear equations, subatomic particle counts, half-life graphs &amp; net decline ratios.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 4: Number of Questions 5-Column Grid -->
+      <div class="section-block" style="margin-bottom: 0;">
+        <div class="section-header-bar">
+          <span class="section-title">Number of Questions</span>
+          <span id="available-q-label" class="avail-count-text">60 unique questions available for Higher Tier</span>
+        </div>
+
+        <div class="count-grid" role="radiogroup" aria-label="Number of Questions">
+          <button type="button" class="count-btn" data-count="10" onclick="selectCount(10)">10</button>
+          <button type="button" class="count-btn active" data-count="20" onclick="selectCount(20)">20</button>
+          <button type="button" class="count-btn" data-count="30" onclick="selectCount(30)">30</button>
+          <button type="button" class="count-btn" data-count="50" onclick="selectCount(50)">50</button>
+          <button type="button" class="count-btn" data-count="80" onclick="selectCount(80)">80</button>
+        </div>
+
+        <div id="cap-feedback-banner" class="cap-notice hidden"></div>
+      </div>
+
+      <hr class="cta-divider" />
+
+      <button type="button" id="btn-start-quiz" class="btn-start-cta" onclick="launchConfiguredQuiz()">
+        Start Higher Tier Quiz (20 Questions) &rarr;
+      </button>
+    </main>
+
+    <!-- ======================================================================
+         VIEW 2: ACTIVE QUIZ RUNNER
+         ====================================================================== -->
+    <section id="view-quiz" class="card-body hidden" aria-live="polite">
+      <div class="quiz-hud">
+        <div class="hud-badges">
+          <span class="hud-pill-brand">Mr Leek Science</span>
+          <span id="hud-student-pill" class="hud-pill-dark">Student</span>
+          <span id="hud-tier-pill" class="hud-pill-blue">Higher Tier</span>
+          <span id="hud-focus-pill" class="hud-pill-blue">All Atomic Structure &amp; Radioactivity Topics</span>
+          <span id="hud-retry-pill" class="hud-pill-amber hidden">Retry Missed Mode</span>
+        </div>
+
+        <div class="hud-stats">
+          <span id="hud-live-score" class="hud-score-badge">Score: 0 / 0</span>
+          <span id="hud-counter" class="hud-q-counter">Question 1 of 20</span>
+          <button type="button" class="hud-change-btn" onclick="returnToConfig()">Change Settings</button>
+        </div>
+      </div>
+
+      <div class="progress-track">
+        <div id="quiz-progress-fill" class="progress-fill"></div>
+      </div>
+
+      <div class="question-box">
+        <div class="q-meta-row">
+          <span id="q-kicker-label" class="q-kicker">Question 1 &bull; Sub-topic</span>
+          <span class="kbd-tip">Shortcuts: 1–4 or A–D to answer &bull; Enter for Next</span>
+        </div>
+        <div id="q-stem-text" class="q-stem">Question stem</div>
+        <div id="q-formula-box" class="q-formula-box hidden"></div>
+      </div>
+
+      <div id="quiz-options-list" class="options-list"></div>
+
+      <div id="quiz-feedback-panel" class="feedback-panel hidden">
+        <div class="fb-top">
+          <span id="fb-status-text" class="fb-status"></span>
+          <span class="fb-chip">AQA Examiner Insight</span>
+        </div>
+        <div id="fb-insight-text" class="fb-text"></div>
+      </div>
+
+      <div class="quiz-bottom-actions">
+        <button type="button" class="btn-secondary" onclick="returnToConfig()">&larr; Change Settings</button>
+        <button type="button" id="btn-next-question" class="btn-primary-sm hidden" onclick="advanceQuestion()">Next Question &rarr;</button>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         VIEW 3: DIAGNOSTIC RESULTS DASHBOARD
+         ====================================================================== -->
+    <section id="view-report" class="card-body hidden">
+      <div class="report-hero-box">
+        <div id="rep-student-header" class="report-student-line">Diagnostic Report &bull; Student</div>
+        <div class="report-score-row">
+          <span id="rep-pct-val" class="report-pct">85%</span>
+          <span id="rep-frac-val" class="report-fraction">(17 / 20)</span>
+        </div>
+        <div id="rep-grade-pill" class="grade-pill">Estimated AQA Indicator: Grade 8–9</div>
+        <p id="rep-msg-text" class="report-summary-msg"></p>
+      </div>
+
+      <div class="report-btn-row">
+        <button type="button" id="btn-retry-missed" class="btn-primary-sm" onclick="startRetryMissed()">Retry Missed Questions (3)</button>
+        <button type="button" class="btn-secondary" onclick="launchConfiguredQuiz()">Retake Full Quiz</button>
+        <button type="button" class="btn-secondary" onclick="returnToConfig()">Back to Configuration</button>
+      </div>
+
+      <div class="mastery-section-head">
+        <h3>Sub-Topic Mastery Breakdown</h3>
+        <div class="legend-row">
+          <span class="tag-g">Strong Area (&ge;80%)</span>
+          <span class="tag-a">Developing (50–79%)</span>
+          <span class="tag-r">Priority Focus (&lt;50%)</span>
+        </div>
+      </div>
+
+      <div id="rep-mastery-grid" class="mastery-grid"></div>
+
+      <div class="review-header">
+        <h3 style="font-size: 1.05rem; color: var(--slate-900);">Full Question-by-Question Review</h3>
+        <button type="button" id="btn-toggle-review" class="btn-secondary" onclick="toggleReviewSection()">Show Full Question-by-Question Review</button>
+      </div>
+
+      <div id="rep-review-list" class="review-list hidden"></div>
+    </section>
+  </div>
+
+  <p class="footer-note">&copy; Mr Leek Science &bull; AQA GCSE Physics (8463 &amp; 8464) Topic 4 Atomic Structure &amp; Radioactivity Interactive Assessment</p>
+
+  <script>
+    /* ==========================================================================
+       AQA GCSE PHYSICS TOPIC 4 QUESTION BANK (74 UNIQUE QUESTIONS)
+       Subtopics:
+       1. Atoms, Isotopes & Development of the Atomic Model (16 Qs)
+       2. Radioactive Decay & Nuclear Radiation (16 Qs)
+       3. Nuclear Decay Equations (14 Qs)
+       4. Half-Life & Net Decline Calculations (14 Qs)
+       5. Radioactive Contamination, Irradiation & Nuclear Fission/Fusion (14 Qs)
+       ========================================================================== */
+    const SUBTOPIC_GUIDANCE = {
+      "Atoms, Isotopes & Development of the Atomic Model": "Remember an atom has a radius of about 1 &times; 10<sup>&minus;10</sup> m, and its nucleus is less than 1/10,000th of that radius (~1 &times; 10<sup>&minus;14</sup> m) while containing almost all the atom's mass. Isotopes are atoms of the same element (same atomic/proton number) with different numbers of neutrons (different mass numbers). Master the historical sequence: Dalton &rarr; J.J. Thomson (plum pudding model: ball of positive charge with negative electrons embedded) &rarr; Rutherford &amp; Geiger-Marsden alpha scattering (most went straight through = mostly empty space; small fraction deflected/rebounded = tiny, dense, positively charged nucleus) &rarr; Niels Bohr (electrons orbit at specific distances/energy levels) &rarr; James Chadwick (discovered uncharged neutrons in the nucleus).",
+      "Radioactive Decay & Nuclear Radiation": "Radioactive decay is a completely RANDOM process—you cannot predict which nucleus will decay next or when. Activity is measured in becquerels (Bq = 1 decay per second), while count-rate is the number of decays recorded each second by a Geiger-M&uuml;ller tube. Know the 4 radiation types cold: Alpha (&alpha; = 2 protons + 2 neutrons = helium nucleus; stopped by paper or ~5 cm air; strongly ionising), Beta (&beta; = high-speed electron ejected from the nucleus when a neutron turns into a proton; stopped by ~5 mm aluminium or ~1 m air; moderately ionising), Gamma (&gamma; = electromagnetic wave from the nucleus; reduced by thick lead/concrete; weakly ionising), and Neutron (n).",
+      "Nuclear Decay Equations": "Always check that the TOP numbers (mass numbers) and BOTTOM numbers (atomic/proton numbers) balance across the arrow! In alpha decay (<span class='nuc'><span>4</span><span>2</span></span>He), mass number decreases by 4 and atomic number decreases by 2. In beta decay (<span class='nuc'><span>0</span><span>&minus;1</span></span>e), a neutron turns into a proton + electron, so mass number stays UNCHANGED (0) and atomic number INCREASES by 1 (+1). Gamma emission (<span class='nuc'><span>0</span><span>0</span></span>&gamma;) causes NO change to either mass or atomic number. Neutron emission (<span class='nuc'><span>1</span><span>0</span></span>n) decreases mass number by 1 and leaves atomic number unchanged.",
+      "Half-Life & Net Decline Calculations": "Half-life is the time taken for the number of nuclei of the isotope in a sample to halve, OR the time taken for the count-rate (or activity) from a sample containing the isotope to fall to half its initial level. Always subtract any background count-rate BEFORE halving! For Higher Tier net decline ratio questions, calculate the fraction remaining after n half-lives as (1/2)<sup>n</sup>: e.g., after 3 half-lives, 1/8 remains, so the ratio of final to initial activity is 1:8 (and the net decline is 7/8).",
+      "Radioactive Contamination, Irradiation & Nuclear Fission/Fusion": "Distinguish cleanly between CONTAMINATION (unwanted presence of materials containing radioactive atoms on other materials—remains hazardous until removed or decayed) and IRRADIATION (exposing an object to nuclear radiation—the irradiated object does NOT become radioactive itself!). For Separate Physics (8463): know natural &amp; man-made background radiation sources, dose in sieverts (1000 mSv = 1 Sv), medical uses (short half-life gamma tracers; gamma knife radiotherapy), nuclear fission (splitting a large unstable nucleus like U-235 after absorbing a neutron into two smaller nuclei + 2–3 neutrons + gamma/kinetic energy, controlled by boron control rods and slowed by a moderator), and nuclear fusion (joining two light hydrogen nuclei at extreme temperature &amp; pressure in stars)."
+    };
+
+    const QUESTION_POOL = [
+      // ========================================================================
+      // 1. ATOMS, ISOTOPES & DEVELOPMENT OF THE ATOMIC MODEL (16 Questions)
+      // ========================================================================
+      {
+        id: "P4_Q01",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Atoms, Isotopes & Development of the Atomic Model",
+        stem: "What is the approximate radius of an atom, and how does the radius of the nucleus compare to the radius of the whole atom?",
+        formulaBox: "Atomic scale &amp; Nuclear scale (AQA Specification)",
+        options: [
+          "The radius of an atom is about 1 &times; 10<sup>&minus;10</sup> m, and the radius of the nucleus is less than 1/10,000th (1 &times; 10<sup>&minus;14</sup> m) of the radius of the atom",
+          "The radius of an atom is about 1 &times; 10<sup>&minus;14</sup> m, and the nucleus is half the width of the atom",
+          "The radius of an atom is about 1 &times; 10<sup>&minus;6</sup> m, and the nucleus is 1/100th of the atom's radius",
+          "The atom and its nucleus have almost the exact same radius"
+        ],
+        correct: 0,
+        explanation: "AQA specification exact figures: Atoms are very small, having a radius of about 1 &times; 10<sup>&minus;10</sup> metres. The radius of a nucleus is less than 1/10,000 of that of the atom (about 1 &times; 10<sup>&minus;14</sup> m), yet almost all the mass of an atom is concentrated in the nucleus."
+      },
+      {
+        id: "P4_Q02",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Atoms, Isotopes & Development of the Atomic Model",
+        stem: "An atom of Uranium-235 is represented as <span class='nuc'><span>235</span><span>92</span></span>U. How many protons, neutrons, and electrons are in a neutral atom of Uranium-235?",
+        formulaBox: "Mass number A = protons + neutrons  |  Atomic number Z = protons",
+        options: [
+          "92 protons, 143 neutrons, 92 electrons",
+          "235 protons, 92 neutrons, 235 electrons",
+          "92 protons, 235 neutrons, 92 electrons",
+          "143 protons, 92 neutrons, 143 electrons"
+        ],
+        correct: 0,
+        explanation: "Atomic number (bottom) = 92 protons (and 92 electrons in a neutral atom). Neutrons = Mass number &minus; Atomic number = 235 &minus; 92 = 143 neutrons."
+      },
+      {
+        id: "P4_Q03",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Atoms, Isotopes & Development of the Atomic Model",
+        stem: "What are ISOTOPES of an element?",
+        formulaBox: "e.g. Carbon-12 (<span class='nuc'><span>12</span><span>6</span></span>C) and Carbon-14 (<span class='nuc'><span>14</span><span>6</span></span>C)",
+        options: [
+          "Atoms of the same element that have the SAME number of protons (same atomic number) but DIFFERENT numbers of neutrons (different mass numbers)",
+          "Atoms of the same element that have the same number of neutrons but different numbers of protons",
+          "Atoms that have gained or lost outer shell electrons to become charged",
+          "Different elements that happen to have the exact same mass number"
+        ],
+        correct: 0,
+        explanation: "AQA specification exact definition: Atoms of the same element can have different numbers of neutrons; these atoms are called isotopes of that element."
+      },
+      {
+        id: "P4_Q04",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Atoms, Isotopes & Development of the Atomic Model",
+        stem: "How does a neutral atom turn into a POSITIVE ION?",
+        formulaBox: "Ionisation of atoms",
+        options: [
+          "The atom LOSES one or more negatively charged outer electrons (leaving more positively charged protons than electrons)",
+          "The atom GAINS one or more negatively charged electrons",
+          "The atom gains extra protons inside its nucleus",
+          "The atom loses neutrons from its nucleus"
+        ],
+        correct: 0,
+        explanation: "AQA specification: Atoms turn into positive ions if they lose one or more outer electron(s). Gaining electrons produces a negative ion."
+      },
+      {
+        id: "P4_Q05",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Atoms, Isotopes & Development of the Atomic Model",
+        stem: "What happens inside an atom when an electron ABSORBS electromagnetic radiation, and what happens when it later FALLS BACK to a lower energy level?",
+        formulaBox: "Electron energy levels (Bohr model)",
+        options: [
+          "Absorbing electromagnetic radiation causes an electron to move FURTHER AWAY from the nucleus (to a higher energy level); when the electron falls back to a lower energy level, it EMITS electromagnetic radiation",
+          "Absorbing radiation pulls the electron closer to the nucleus; falling outwards emits protons",
+          "Electrons stay permanently locked in one shell and never absorb or emit radiation",
+          "Absorbing electromagnetic radiation turns electrons into neutrons"
+        ],
+        correct: 0,
+        explanation: "AQA specification exact wording: The electron arrangements may change with the absorption of electromagnetic radiation (move further from the nucleus; a higher energy level) or by the emission of electromagnetic radiation (move closer to the nucleus; a lower energy level)."
+      },
+      {
+        id: "P4_Q06",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Atoms, Isotopes & Development of the Atomic Model",
+        stem: "Describe J.J. Thomson's PLUM PUDDING MODEL of the atom (proposed after his discovery of the electron).",
+        formulaBox: "Pre-1909 model of atomic structure",
+        options: [
+          "The atom was thought to be a ball of positive charge with negatively charged electrons embedded throughout it",
+          "A tiny, dense, positively charged central nucleus surrounded by empty space and orbiting electrons",
+          "Solid, indivisible billiard-ball spheres with no internal subatomic particles",
+          "Electrons fixed inside a central nucleus with protons orbiting outside"
+        ],
+        correct: 0,
+        explanation: "AQA specification: The discovery of the electron led to the plum pudding model of the atom. The plum pudding model suggested that the atom is a ball of positive charge with negative electrons embedded in it."
+      },
+      {
+        id: "P4_Q07",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Atoms, Isotopes & Development of the Atomic Model",
+        stem: "In Rutherford, Geiger, and Marsden's ALPHA PARTICLE SCATTERING EXPERIMENT, positively charged alpha particles were fired at a thin sheet of gold foil in a vacuum. What were the THREE key observations?",
+        formulaBox: "Geiger–Marsden Gold Foil Experiment",
+        options: [
+          "1. Most alpha particles passed straight through with no deflection; 2. A small number were deflected through small/large angles; 3. Very few (about 1 in 8000) bounced straight back (deflected by &gt;90&deg;)",
+          "1. All alpha particles bounced straight back off the gold foil; 2. None passed through",
+          "1. Half turned into beta particles; 2. Half were absorbed completely by electrons",
+          "1. All alpha particles bent downwards under gravity"
+        ],
+        correct: 0,
+        explanation: "These three observations directly disproved the plum pudding model, which predicted only tiny deflections because positive charge was thought to be spread thinly across the whole atom."
+      },
+      {
+        id: "P4_Q08",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        subtopic: "Atoms, Isotopes & Development of the Atomic Model",
+        stem: "Link each observation from the alpha particle scattering experiment to its exact scientific CONCLUSION about the NUCLEAR MODEL of the atom.",
+        formulaBox: "Evidence &rarr; Nuclear Model Conclusions",
+        options: [
+          "Most went straight through &rArr; atom is mostly EMPTY SPACE; Some deflected at large angles &rArr; nucleus has a POSITIVE CHARGE (repelling positive alpha particles); Very few bounced straight back &rArr; almost all the atom's MASS is concentrated in a tiny, dense central NUCLEUS",
+          "Most went straight through &rArr; nucleus is huge; Bounced straight back &rArr; nucleus is negatively charged",
+          "Most went straight through &rArr; gold foil had holes cut in it; Deflected &rArr; electrons are heavier than alpha particles",
+          "Bounced straight back &rArr; neutrons orbit outside the electrons"
+        ],
+        correct: 0,
+        explanation: "Classic 4-mark AQA Higher question: Empty space (most pass straight through) + positive charge (repulsion) + tiny, dense, massive nucleus (rare rebounds)."
+      },
+      {
+        id: "P4_Q09",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Atoms, Isotopes & Development of the Atomic Model",
+        stem: "What crucial improvement did NIELS BOHR make to Rutherford's nuclear model of the atom?",
+        formulaBox: "Bohr's adaptation of the nuclear model",
+        options: [
+          "Bohr suggested that electrons orbit the nucleus at specific distances (in discrete energy levels/shells), which matched experimental observations of light spectra",
+          "Bohr discovered the uncharged neutron inside the nucleus",
+          "Bohr discovered the electron using cathode rays",
+          "Bohr proved that protons orbit around a central cloud of neutrons"
+        ],
+        correct: 0,
+        explanation: "AQA specification exact wording: Niels Bohr adapted the nuclear model by suggesting that electrons orbit the nucleus at specific distances. The theoretical calculations of Bohr agreed with experimental observations."
+      },
+      {
+        id: "P4_Q10",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Atoms, Isotopes & Development of the Atomic Model",
+        stem: "Which scientist provided experimental evidence in 1932 for the existence of NEUTRONS within the nucleus?",
+        formulaBox: "Completing the modern nuclear model",
+        options: [
+          "James Chadwick",
+          "J.J. Thomson",
+          "John Dalton",
+          "Niels Bohr"
+        ],
+        correct: 0,
+        explanation: "AQA specification: Later experiments led to the idea that the positive charge of any nucleus could be subdivided into a whole number of smaller particles (protons). The experimental work of James Chadwick provided the evidence to show the existence of neutrons within the nucleus."
+      },
+      {
+        id: "P4_Q11",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Atoms, Isotopes & Development of the Atomic Model",
+        stem: "Why are all neutral atoms electrically UNCHARGED overall?",
+        formulaBox: "Relative charges: Proton = +1, Electron = &minus;1, Neutron = 0",
+        options: [
+          "Because the number of positively charged protons in the nucleus is equal to the number of negatively charged electrons orbiting outside, so their charges cancel out",
+          "Because atoms contain equal numbers of protons and neutrons",
+          "Because neutrons absorb the positive charge of protons",
+          "Because electrons have zero electrical charge"
+        ],
+        correct: 0,
+        explanation: "In a neutral atom, number of protons (+1 each) = number of electrons (&minus;1 each), giving zero net charge."
+      },
+      {
+        id: "P4_Q12",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        subtopic: "Atoms, Isotopes & Development of the Atomic Model",
+        stem: "Why was the alpha particle scattering experiment conducted inside an EVACUATED (vacuum) chamber rather than in normal air?",
+        formulaBox: "Experimental design of Geiger–Marsden apparatus",
+        options: [
+          "Because alpha particles have a very short range in air (~5 cm) and would collide with air molecules, ionising them and scattering before ever reaching the gold foil or detector",
+          "Because gold foil bursts into flames when exposed to oxygen",
+          "Because alpha particles travel faster than light in air",
+          "Because zinc sulfide detectors dissolve in air"
+        ],
+        correct: 0,
+        explanation: "In air, collisions with nitrogen and oxygen molecules would scatter/stop the alpha particles, ruining the gold-foil scattering measurements."
+      },
+      {
+        id: "P4_Q13",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Atoms, Isotopes & Development of the Atomic Model",
+        stem: "Two atoms are represented as <span class='nuc'><span>35</span><span>17</span></span>Cl and <span class='nuc'><span>37</span><span>17</span></span>Cl. Which statement is true about these two atoms?",
+        formulaBox: "Comparing isotopic symbols",
+        options: [
+          "They are isotopes of chlorine: both have 17 protons and 17 electrons, while the first has 18 neutrons and the second has 20 neutrons",
+          "They are different elements because their mass numbers differ",
+          "The first has 35 protons and the second has 37 protons",
+          "The second atom has 2 extra electrons"
+        ],
+        correct: 0,
+        explanation: "Same atomic number (17) &rArr; same element (chlorine). Neutrons: 35 &minus; 17 = 18 vs. 37 &minus; 17 = 20."
+      },
+      {
+        id: "P4_Q14",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        subtopic: "Atoms, Isotopes & Development of the Atomic Model",
+        stem: "How can scientific models—such as the model of the atom—change over time?",
+        formulaBox: "Working Scientifically — Development of Scientific Models",
+        options: [
+          "New experimental evidence may lead to a scientific model being changed or replaced when the existing model cannot explain the new observations",
+          "Scientific models are chosen by public vote every 10 years regardless of experiments",
+          "Once a model is published in a textbook, it can never be altered",
+          "Models only change when computers run out of memory"
+        ],
+        correct: 0,
+        explanation: "AQA specification exact wording: New experimental evidence may lead to a scientific model being changed or replaced."
+      },
+      {
+        id: "P4_Q15",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Atoms, Isotopes & Development of the Atomic Model",
+        stem: "An atom has a radius of 1.2 &times; 10<sup>&minus;10</sup> m. Estimate the approximate radius of its nucleus.",
+        formulaBox: "r<sub>nucleus</sub> &approx; r<sub>atom</sub> / 10,000",
+        options: [
+          "1.2 &times; 10<sup>&minus;14</sup> m",
+          "1.2 &times; 10<sup>&minus;6</sup> m",
+          "1.2 &times; 10<sup>&minus;11</sup> m",
+          "1.2 &times; 10<sup>&minus;20</sup> m"
+        ],
+        correct: 0,
+        explanation: "Dividing 1.2 &times; 10<sup>&minus;10</sup> m by 10,000 (10<sup>4</sup>) gives 1.2 &times; 10<sup>&minus;14</sup> m."
+      },
+      {
+        id: "P4_Q16",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Atoms, Isotopes & Development of the Atomic Model",
+        stem: "An ion is represented as <span class='nuc'><span>24</span><span>12</span></span>Mg<sup>2+</sup>. How many protons, neutrons, and electrons does this ion contain?",
+        formulaBox: "2+ charge means 2 outer electrons have been lost",
+        options: [
+          "12 protons, 12 neutrons, 10 electrons",
+          "12 protons, 12 neutrons, 14 electrons",
+          "10 protons, 14 neutrons, 12 electrons",
+          "24 protons, 12 neutrons, 10 electrons"
+        ],
+        correct: 0,
+        explanation: "Protons = 12; neutrons = 24 &minus; 12 = 12; losing 2 electrons leaves 12 &minus; 2 = 10 electrons."
+      },
+
+      // ========================================================================
+      // 2. RADIOACTIVE DECAY & NUCLEAR RADIATION (16 Questions)
+      // ========================================================================
+      {
+        id: "P4_Q17",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Radioactive Decay & Nuclear Radiation",
+        stem: "Why do some atomic nuclei undergo RADIOACTIVE DECAY, and why is radioactive decay described as a RANDOM process?",
+        formulaBox: "Unstable nuclei &amp; Random nature of decay",
+        options: [
+          "Some atomic nuclei are unstable and give out radiation as they change to become more stable; it is impossible to predict which particular nucleus will decay next or exactly when it will decay (and decay rate is unaffected by temperature or pressure)",
+          "Nuclei decay only when heated above 500 &deg;C in a laboratory",
+          "All atoms in a radioactive sample decay simultaneously at the exact same instant",
+          "Radioactive decay is caused by outer electrons colliding with the nucleus"
+        ],
+        correct: 0,
+        explanation: "AQA specification exact wording: Some atomic nuclei are unstable. The nucleus gives out radiation as it changes to become more stable. This is a random process because you cannot predict which nucleus will decay next or when."
+      },
+      {
+        id: "P4_Q18",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Radioactive Decay & Nuclear Radiation",
+        stem: "Distinguish between the ACTIVITY of a radioactive source and the COUNT-RATE measured by a Geiger-M&uuml;ller (GM) tube.",
+        formulaBox: "Activity (Bq) vs. Count-rate (counts/s or counts/min)",
+        options: [
+          "Activity is the total rate at which a source of unstable nuclei decays, measured in becquerels (Bq, where 1 Bq = 1 decay per second); Count-rate is the number of decays recorded each second by a detector (such as a GM tube), which is usually lower than activity because radiation spreads in all directions",
+          "Activity is measured in sieverts; Count-rate is measured in becquerels",
+          "Activity and count-rate are always identical numbers regardless of detector distance",
+          "Activity is the number of neutrons in a sample; Count-rate is the mass in grams"
+        ],
+        correct: 0,
+        explanation: "AQA specification exact definitions: Activity is the rate at which a source of unstable nuclei decays (measured in becquerel, Bq). Count-rate is the number of decays recorded each second by a detector (e.g. Geiger-M&uuml;ller tube)."
+      },
+      {
+        id: "P4_Q19",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Radioactive Decay & Nuclear Radiation",
+        stem: "What is the exact physical nature of an ALPHA (&alpha;) PARTICLE?",
+        formulaBox: "Symbol: <span class='nuc'><span>4</span><span>2</span></span>He or &alpha;",
+        options: [
+          "Two neutrons and two protons — it is identical to a helium nucleus (charge +2, relative mass 4)",
+          "A high-speed electron ejected from the nucleus (charge &minus;1)",
+          "A high-frequency electromagnetic wave with zero mass and zero charge",
+          "A single uncharged neutron"
+        ],
+        correct: 0,
+        explanation: "AQA specification exact wording: An alpha particle (&alpha;) – this consists of two neutrons and two protons, it is the same as a helium nucleus."
+      },
+      {
+        id: "P4_Q20",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Radioactive Decay & Nuclear Radiation",
+        stem: "What is a BETA (&beta;) PARTICLE, and how is it produced inside an unstable nucleus?",
+        formulaBox: "Symbol: <span class='nuc'><span>0</span><span>&minus;1</span></span>e or &beta;",
+        options: [
+          "A high-speed electron ejected from the nucleus as a neutron turns into a proton",
+          "An outer-shell electron knocked off by UV light",
+          "A helium nucleus made of two protons and two neutrons",
+          "A packet of gamma electromagnetic energy"
+        ],
+        correct: 0,
+        explanation: "AQA specification exact wording: A beta particle (&beta;) – a high speed electron ejected from the nucleus as a neutron turns into a proton."
+      },
+      {
+        id: "P4_Q21",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Radioactive Decay & Nuclear Radiation",
+        stem: "What is GAMMA (&gamma;) RADIATION?",
+        formulaBox: "Symbol: &gamma;",
+        options: [
+          "Electromagnetic radiation (a high-energy, short-wavelength wave) emitted from the nucleus after alpha or beta decay",
+          "A stream of positively charged protons",
+          "A heavy particle made of four neutrons",
+          "Sound waves produced by vibrating nuclei"
+        ],
+        correct: 0,
+        explanation: "AQA specification exact wording: A gamma ray (&gamma;) – electromagnetic radiation from the nucleus."
+      },
+      {
+        id: "P4_Q22",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Radioactive Decay & Nuclear Radiation",
+        stem: "Rank ALPHA (&alpha;), BETA (&beta;), and GAMMA (&gamma;) radiation from MOST IONISING to LEAST IONISING, and from LEAST PENETRATING to MOST PENETRATING.",
+        formulaBox: "Ionising power vs. Penetration power",
+        options: [
+          "Ionising power: Alpha (most) &gt; Beta &gt; Gamma (least); Penetration power: Alpha (least — stopped by paper) &lt; Beta (stopped by ~5 mm aluminium) &lt; Gamma (most — reduced by thick lead/concrete)",
+          "Ionising power: Gamma (most) &gt; Beta &gt; Alpha (least); Penetration power: Alpha (most) &gt; Beta &gt; Gamma (least)",
+          "Alpha is both most ionising and most penetrating",
+          "Gamma is both most ionising and least penetrating"
+        ],
+        correct: 0,
+        explanation: "Ionising power and penetrating power are inversely related: heavy, +2 charged alpha particles collide frequently with atoms (strongly ionising, so they lose energy rapidly and stop within ~5 cm of air or a sheet of paper)."
+      },
+      {
+        id: "P4_Q23",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Radioactive Decay & Nuclear Radiation",
+        stem: "What is the approximate RANGE IN AIR of alpha, beta, and gamma radiation?",
+        formulaBox: "Range in air comparison",
+        options: [
+          "Alpha: a few centimetres (~3–5 cm); Beta: around 1 metre; Gamma: practically unlimited (hundreds of metres / follows inverse-square law)",
+          "Alpha: 100 metres; Beta: 5 cm; Gamma: 1 metre",
+          "Alpha: 1 metre; Beta: 5 cm; Gamma: 10 cm",
+          "All three travel exactly 10 metres in air"
+        ],
+        correct: 0,
+        explanation: "Alpha stops within ~5 cm of air, beta travels ~1 m in air, and gamma travels very long distances in air."
+      },
+      {
+        id: "P4_Q24",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Radioactive Decay & Nuclear Radiation",
+        stem: "A student places different absorber sheets between a sealed radioactive source and a Geiger-M&uuml;ller tube. Look at the count-rate table (background count = 20 counts/min). Which type(s) of radiation does the source emit?",
+        formulaBox: "<table class='data-table'><tr><th>Absorber placed in front of source</th><td>None (2 cm air)</td><td>Sheet of paper</td><td>5 mm Aluminium</td><td>5 cm Lead</td></tr><tr><th>Count-rate (counts/min)</th><td>420</td><td>418</td><td>21</td><td>20</td></tr></table>",
+        options: [
+          "Beta (&beta;) radiation ONLY (paper did not reduce the count significantly, showing no alpha; 5 mm aluminium dropped the count right down to the 20 counts/min background level, showing all radiation was stopped by aluminium so no gamma)",
+          "Alpha (&alpha;) radiation only",
+          "Gamma (&gamma;) radiation only",
+          "Both alpha and gamma radiation"
+        ],
+        correct: 0,
+        explanation: "420 &rarr; 418 with paper (within random variation, so no alpha); 418 &rarr; 21 with 5 mm Al (matches 20 counts/min background, so beta is completely absorbed and zero gamma is present)."
+      },
+      {
+        id: "P4_Q25",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Radioactive Decay & Nuclear Radiation",
+        stem: "Why is an ALPHA-emitting isotope (Americium-241, half-life 432 years) used inside domestic IONISATION SMOKE DETECTORS?",
+        formulaBox: "Linking radiation properties to practical uses",
+        options: [
+          "Alpha particles strongly ionise the air inside the sensor chamber to create a small steady current—when smoke enters, it absorbs the alpha particles, reducing the current and triggering the alarm—and alpha cannot penetrate the plastic casing to harm people outside",
+          "Alpha particles pass right through brick walls to alert neighbours",
+          "Alpha particles melt the plastic casing when a fire starts",
+          "Alpha radiation has a half-life of 2 seconds"
+        ],
+        correct: 0,
+        explanation: "High ionising power creates the ion current in air; low penetrating power means the plastic casing safely blocks all alpha radiation."
+      },
+      {
+        id: "P4_Q26",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Radioactive Decay & Nuclear Radiation",
+        stem: "In a factory rolling thin ALUMINIUM FOIL (around 0.5 mm thick) or paper, a radioactive source is placed on one side of the moving sheet and a GM detector on the other to automatically control the rollers. Which radiation type is used, and why?",
+        formulaBox: "Industrial thickness monitoring",
+        options: [
+          "Beta (&beta;) radiation — alpha would be completely blocked by even the thinnest foil/paper, and gamma would pass straight through without any change in count-rate when thickness varies, whereas beta is partially absorbed depending on exact thickness",
+          "Alpha (&alpha;) radiation — because it passes straight through thick steel",
+          "Gamma (&gamma;) radiation — because paper stops 100% of gamma rays",
+          "Neutron radiation — because it turns aluminium into gold"
+        ],
+        correct: 0,
+        explanation: "If the foil gets too thick, more beta is absorbed &rarr; count-rate drops &rarr; computer signals rollers to squeeze harder (and vice versa)."
+      },
+      {
+        id: "P4_Q27",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Radioactive Decay & Nuclear Radiation",
+        stem: "What is meant by IONISATION when nuclear radiation passes through matter or living tissue?",
+        formulaBox: "Ionising radiation &amp; Cellular damage",
+        options: [
+          "Nuclear radiation knocks electrons off neutral atoms, turning them into charged ions—in living cells this can damage or kill cells or cause DNA mutations leading to cancer",
+          "Nuclear radiation adds extra protons to atoms to turn carbon into uranium",
+          "Nuclear radiation freezes water inside cells into ice",
+          "Nuclear radiation lowers the temperature of atoms to absolute zero"
+        ],
+        correct: 0,
+        explanation: "Alpha, beta, and gamma are all forms of ionising radiation because they carry enough energy to remove electrons from atoms."
+      },
+      {
+        id: "P4_Q28",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Radioactive Decay & Nuclear Radiation",
+        stem: "How are ALPHA, BETA, and GAMMA radiation deflected when passing through an ELECTRIC FIELD or a MAGNETIC FIELD?",
+        formulaBox: "Charge of nuclear radiations",
+        options: [
+          "Alpha (+2) and Beta (&minus;1) are deflected in OPPOSITE directions (with lighter beta curving much more sharply), whereas uncharged Gamma (0) passes straight through undeflected",
+          "Alpha and Beta bend in the exact same direction, while Gamma bends sharply",
+          "None of the three radiations are affected by electric or magnetic fields",
+          "Only Gamma is deflected by magnetic fields"
+        ],
+        correct: 0,
+        explanation: "Opposite charges (+2 vs &minus;1) experience opposite forces; gamma rays have zero charge so they are undeflected."
+      },
+      {
+        id: "P4_Q29",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        subtopic: "Radioactive Decay & Nuclear Radiation",
+        stem: "Why is ALPHA radiation by far the most dangerous type of radiation if a radioactive source is INHALED or SWALLOWED (internal contamination), even though it is the least dangerous outside the body?",
+        formulaBox: "Internal vs. External hazard",
+        options: [
+          "Outside the body, alpha cannot penetrate the outer layer of dead skin cells; inside the body, alpha is directly adjacent to living cells and deposits all its energy over a tiny distance with very high ionising power, causing severe cellular/DNA damage",
+          "Inside the body, alpha particles turn into gamma rays",
+          "Stomach acid doubles the half-life of alpha emitters",
+          "Alpha radiation travels through the whole body and out the other side"
+        ],
+        correct: 0,
+        explanation: "External alpha is stopped by dead skin/clothing, whereas internal alpha concentrates intense ionisation directly into living tissue."
+      },
+      {
+        id: "P4_Q30",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Radioactive Decay & Nuclear Radiation",
+        stem: "What is the unit of RADIOACTIVE ACTIVITY?",
+        formulaBox: "1 unit = 1 nuclear decay per second",
+        options: [
+          "Becquerel (Bq)",
+          "Sievert (Sv)",
+          "Joule (J)",
+          "Hertz (Hz)"
+        ],
+        correct: 0,
+        explanation: "Activity is measured in becquerels (Bq). Radiation dose is measured in sieverts (Sv)."
+      },
+      {
+        id: "P4_Q31",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Radioactive Decay & Nuclear Radiation",
+        stem: "A radioactive sample undergoes 4800 nuclear decays in 2.0 minutes. Calculate the average activity of the sample in becquerels (Bq).",
+        formulaBox: "Activity (Bq) = Number of decays / Time (s)",
+        options: [
+          "40 Bq",
+          "2400 Bq",
+          "9600 Bq",
+          "288,000 Bq"
+        ],
+        correct: 0,
+        explanation: "Convert 2.0 minutes = 120 seconds. Activity = 4800 &divide; 120 = 40 Bq."
+      },
+      {
+        id: "P4_Q32",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Radioactive Decay & Nuclear Radiation",
+        stem: "Why can a student NOT predict the exact number of counts a Geiger-M&uuml;ller tube will record in the next 10-second interval, even when the activity of the source is known?",
+        formulaBox: "Random nature of radioactive decay",
+        options: [
+          "Because radioactive decay is a random process, so the count-rate fluctuates randomly around an average value from second to second",
+          "Because Geiger-M&uuml;ller tubes have flat batteries",
+          "Because air pressure changes every 10 seconds",
+          "Because half-life changes every second"
+        ],
+        correct: 0,
+        explanation: "Randomness causes statistical fluctuations in short count intervals, which is why scientists take repeat readings or count over longer periods."
+      },
+
+      // ========================================================================
+      // 3. NUCLEAR DECAY EQUATIONS (14 Questions)
+      // ========================================================================
+      {
+        id: "P4_Q33",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Nuclear Decay Equations",
+        stem: "When an unstable nucleus emits an ALPHA PARTICLE (<span class='nuc'><span>4</span><span>2</span></span>He), how do its MASS NUMBER and ATOMIC NUMBER change?",
+        formulaBox: "Alpha decay rule",
+        options: [
+          "Mass number decreases by 4, and atomic number decreases by 2",
+          "Mass number stays the same, and atomic number increases by 1",
+          "Mass number decreases by 2, and atomic number decreases by 4",
+          "Neither mass number nor atomic number changes"
+        ],
+        correct: 0,
+        explanation: "AQA specification exact rule: Alpha decay causes both the mass and charge of the nucleus to decrease (mass number &minus;4, atomic number &minus;2)."
+      },
+      {
+        id: "P4_Q34",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Nuclear Decay Equations",
+        stem: "When an unstable nucleus emits a BETA PARTICLE (<span class='nuc'><span>0</span><span>&minus;1</span></span>e), how do its MASS NUMBER and ATOMIC NUMBER change?",
+        formulaBox: "Beta decay rule (neutron &rarr; proton + electron)",
+        options: [
+          "Mass number does NOT change (0), and atomic number INCREASES by 1 (+1)",
+          "Mass number decreases by 1, and atomic number decreases by 1",
+          "Mass number decreases by 4, and atomic number decreases by 2",
+          "Mass number increases by 1, and atomic number stays the same"
+        ],
+        correct: 0,
+        explanation: "AQA specification exact rule: Beta decay does not cause the mass of the nucleus to change (total nucleons unchanged because a neutron turns into a proton) but does cause the charge of the nucleus to increase by +1."
+      },
+      {
+        id: "P4_Q35",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Nuclear Decay Equations",
+        stem: "Complete the nuclear equation for the ALPHA decay of Radon-219 into Polonium (Po):<br><span class='nuc'><span>219</span><span>86</span></span>Rn &rarr; <span class='nuc'><span>A</span><span>Z</span></span>Po + <span class='nuc'><span>4</span><span>2</span></span>He",
+        formulaBox: "Balance top (mass) and bottom (atomic) numbers",
+        options: [
+          "A = 215, Z = 84 (<span class='nuc'><span>215</span><span>84</span></span>Po)",
+          "A = 217, Z = 82 (<span class='nuc'><span>217</span><span>82</span></span>Po)",
+          "A = 219, Z = 87 (<span class='nuc'><span>219</span><span>87</span></span>Po)",
+          "A = 223, Z = 88 (<span class='nuc'><span>223</span><span>88</span></span>Po)"
+        ],
+        correct: 0,
+        explanation: "Top: 219 = A + 4 &rArr; A = 215. Bottom: 86 = Z + 2 &rArr; Z = 84."
+      },
+      {
+        id: "P4_Q36",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Nuclear Decay Equations",
+        stem: "Complete the nuclear equation for the BETA decay of Carbon-14 into Nitrogen (N):<br><span class='nuc'><span>14</span><span>6</span></span>C &rarr; <span class='nuc'><span>A</span><span>Z</span></span>N + <span class='nuc'><span>0</span><span>&minus;1</span></span>e",
+        formulaBox: "6 = Z + (&minus;1)",
+        options: [
+          "A = 14, Z = 7 (<span class='nuc'><span>14</span><span>7</span></span>N)",
+          "A = 14, Z = 5 (<span class='nuc'><span>14</span><span>5</span></span>N)",
+          "A = 13, Z = 7 (<span class='nuc'><span>13</span><span>7</span></span>N)",
+          "A = 10, Z = 4 (<span class='nuc'><span>10</span><span>4</span></span>N)"
+        ],
+        correct: 0,
+        explanation: "Top: 14 = A + 0 &rArr; A = 14. Bottom: 6 = Z &minus; 1 &rArr; Z = 7. (Watch out for the common trap of subtracting 1 to get 5 instead of 7!)"
+      },
+      {
+        id: "P4_Q37",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Nuclear Decay Equations",
+        stem: "What happens to the mass number and atomic number of a nucleus when it emits a GAMMA RAY (&gamma;)?",
+        formulaBox: "Gamma ray emission",
+        options: [
+          "Neither the mass number nor the atomic number changes (the nucleus simply releases excess energy to become more stable)",
+          "Mass number decreases by 4 and atomic number decreases by 2",
+          "Atomic number increases by 1",
+          "Mass number decreases by 1"
+        ],
+        correct: 0,
+        explanation: "AQA specification exact wording: The emission of a gamma ray does not cause the mass or the charge of the nucleus to change."
+      },
+      {
+        id: "P4_Q38",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Nuclear Decay Equations",
+        stem: "Identify the missing particle X in the following nuclear decay equation:<br><span class='nuc'><span>238</span><span>92</span></span>U &rarr; <span class='nuc'><span>234</span><span>90</span></span>Th + X",
+        formulaBox: "238 &minus; 234 = 4  |  92 &minus; 90 = 2",
+        options: [
+          "An alpha particle (<span class='nuc'><span>4</span><span>2</span></span>He)",
+          "A beta particle (<span class='nuc'><span>0</span><span>&minus;1</span></span>e)",
+          "A gamma ray (<span class='nuc'><span>0</span><span>0</span></span>&gamma;)",
+          "A neutron (<span class='nuc'><span>1</span><span>0</span></span>n)"
+        ],
+        correct: 0,
+        explanation: "Mass drops by 4 (238 &rarr; 234) and atomic number drops by 2 (92 &rarr; 90), which is <span class='nuc'><span>4</span><span>2</span></span>He (an alpha particle)."
+      },
+      {
+        id: "P4_Q39",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Nuclear Decay Equations",
+        stem: "Identify the missing particle Y in the following nuclear decay equation:<br><span class='nuc'><span>131</span><span>53</span></span>I &rarr; <span class='nuc'><span>131</span><span>54</span></span>Xe + Y",
+        formulaBox: "131 &minus; 131 = 0  |  53 &minus; 54 = &minus;1",
+        options: [
+          "A beta particle (<span class='nuc'><span>0</span><span>&minus;1</span></span>e)",
+          "An alpha particle (<span class='nuc'><span>4</span><span>2</span></span>He)",
+          "A proton (<span class='nuc'><span>1</span><span>1</span></span>p)",
+          "A neutron (<span class='nuc'><span>1</span><span>0</span></span>n)"
+        ],
+        correct: 0,
+        explanation: "Mass number is unchanged (131) while atomic number increases from 53 to 54, so Y must have mass 0 and charge &minus;1 (<span class='nuc'><span>0</span><span>&minus;1</span></span>e, beta particle)."
+      },
+      {
+        id: "P4_Q40",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Nuclear Decay Equations",
+        stem: "Some very neutron-rich nuclei undergo NEUTRON EMISSION (<span class='nuc'><span>1</span><span>0</span></span>n). Complete the equation for Beryllium-13 emitting a neutron:<br><span class='nuc'><span>13</span><span>4</span></span>Be &rarr; <span class='nuc'><span>A</span><span>Z</span></span>Be + <span class='nuc'><span>1</span><span>0</span></span>n",
+        formulaBox: "Neutron emission equation",
+        options: [
+          "A = 12, Z = 4 (<span class='nuc'><span>12</span><span>4</span></span>Be — stays the same element, beryllium, but becomes a lighter isotope)",
+          "A = 12, Z = 3 (<span class='nuc'><span>12</span><span>3</span></span>Li)",
+          "A = 13, Z = 5 (<span class='nuc'><span>13</span><span>5</span></span>B)",
+          "A = 9, Z = 2 (<span class='nuc'><span>9</span><span>2</span></span>He)"
+        ],
+        correct: 0,
+        explanation: "Top: 13 = A + 1 &rArr; A = 12. Bottom: 4 = Z + 0 &rArr; Z = 4. Because atomic number stays 4, the element does not change!"
+      },
+      {
+        id: "P4_Q41",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Nuclear Decay Equations",
+        stem: "A nucleus of Thorium-232 (<span class='nuc'><span>232</span><span>90</span></span>Th) decays by emitting ONE alpha particle followed by TWO beta particles. What are the final mass number and atomic number of the resulting nucleus?",
+        formulaBox: "Multi-step decay chain",
+        options: [
+          "Mass number = 228, Atomic number = 90 (it returns to being an isotope of Thorium!)",
+          "Mass number = 228, Atomic number = 86",
+          "Mass number = 224, Atomic number = 88",
+          "Mass number = 232, Atomic number = 92"
+        ],
+        correct: 0,
+        explanation: "Alpha decay: mass 232 &minus; 4 = 228, atomic 90 &minus; 2 = 88. Two beta decays: mass 228 + 0 = 228, atomic 88 + 1 + 1 = 90."
+      },
+      {
+        id: "P4_Q42",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Nuclear Decay Equations",
+        stem: "In nuclear equations, how is an ALPHA PARTICLE written using standard isotopic notation?",
+        formulaBox: "Standard AQA nuclear equation notation",
+        options: [
+          "<span class='nuc'><span>4</span><span>2</span></span>He",
+          "<span class='nuc'><span>2</span><span>4</span></span>He",
+          "<span class='nuc'><span>0</span><span>&minus;1</span></span>e",
+          "<span class='nuc'><span>1</span><span>0</span></span>n"
+        ],
+        correct: 0,
+        explanation: "AQA specification exact notation: In nuclear equations, an alpha particle is represented as <span class='nuc'><span>4</span><span>2</span></span>He and a beta particle as <span class='nuc'><span>0</span><span>&minus;1</span></span>e."
+      },
+      {
+        id: "P4_Q43",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Nuclear Decay Equations",
+        stem: "Americium-241 decays by alpha emission:<br><span class='nuc'><span>241</span><span>95</span></span>Am &rarr; <span class='nuc'><span>237</span><span>93</span></span>Np + <span class='nuc'><span>4</span><span>2</span></span>He<br>How many NEUTRONS are inside the Neptunium (<span class='nuc'><span>237</span><span>93</span></span>Np) daughter nucleus?",
+        formulaBox: "Neutrons = Mass number &minus; Atomic number",
+        options: [
+          "144 neutrons",
+          "93 neutrons",
+          "237 neutrons",
+          "146 neutrons"
+        ],
+        correct: 0,
+        explanation: "237 &minus; 93 = 144 neutrons."
+      },
+      {
+        id: "P4_Q44",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Nuclear Decay Equations",
+        stem: "Strontium-90 (<span class='nuc'><span>90</span><span>38</span></span>Sr) undergoes beta-minus decay to form Yttrium (Y). Write the correct balanced nuclear equation.",
+        formulaBox: "Balancing beta decay",
+        options: [
+          "<span class='nuc'><span>90</span><span>38</span></span>Sr &rarr; <span class='nuc'><span>90</span><span>39</span></span>Y + <span class='nuc'><span>0</span><span>&minus;1</span></span>e",
+          "<span class='nuc'><span>90</span><span>38</span></span>Sr &rarr; <span class='nuc'><span>90</span><span>37</span></span>Y + <span class='nuc'><span>0</span><span>&minus;1</span></span>e",
+          "<span class='nuc'><span>90</span><span>38</span></span>Sr &rarr; <span class='nuc'><span>86</span><span>36</span></span>Y + <span class='nuc'><span>4</span><span>2</span></span>He",
+          "<span class='nuc'><span>90</span><span>38</span></span>Sr &rarr; <span class='nuc'><span>89</span><span>39</span></span>Y + <span class='nuc'><span>0</span><span>&minus;1</span></span>e"
+        ],
+        correct: 0,
+        explanation: "Top: 90 = 90 + 0. Bottom: 38 = 39 + (&minus;1)."
+      },
+      {
+        id: "P4_Q45",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Nuclear Decay Equations",
+        stem: "An unknown parent nucleus X undergoes alpha decay to produce Lead-206 (<span class='nuc'><span>206</span><span>82</span></span>Pb). What were the mass number and atomic number of nucleus X before it decayed?",
+        formulaBox: "Working backwards from daughter nucleus",
+        options: [
+          "Mass number = 210, Atomic number = 84 (Polonium-210)",
+          "Mass number = 202, Atomic number = 80",
+          "Mass number = 206, Atomic number = 81",
+          "Mass number = 210, Atomic number = 80"
+        ],
+        correct: 0,
+        explanation: "X &rarr; <span class='nuc'><span>206</span><span>82</span></span>Pb + <span class='nuc'><span>4</span><span>2</span></span>He &rArr; Top: 206 + 4 = 210; Bottom: 82 + 2 = 84."
+      },
+      {
+        id: "P4_Q46",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Nuclear Decay Equations",
+        stem: "Why does the atomic number INCREASE by 1 during beta decay even though a negatively charged electron leaves the nucleus?",
+        formulaBox: "Nucleon transformation in beta decay",
+        options: [
+          "Because inside the nucleus, a neutral NEUTRON changes into a positively charged PROTON (which stays in the nucleus, increasing proton number by 1) and a high-speed electron (which is ejected)",
+          "Because the nucleus absorbs a proton from outer space",
+          "Because two electrons combine inside the nucleus to make a proton",
+          "Because gamma rays carry positive charge"
+        ],
+        correct: 0,
+        explanation: "Charge is conserved: 0 (neutron) &rarr; +1 (proton) + (&minus;1) (beta electron)."
+      },
+
+      // ========================================================================
+      // 4. HALF-LIFE & NET DECLINE CALCULATIONS (14 Questions)
+      // ========================================================================
+      {
+        id: "P4_Q47",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Half-Life & Net Decline Calculations",
+        stem: "What is the exact AQA definition of the HALF-LIFE of a radioactive isotope?",
+        formulaBox: "Half-life definition (2 valid AQA versions)",
+        options: [
+          "The time it takes for the number of nuclei of the isotope in a sample to halve, OR the time it takes for the count-rate (or activity) from a sample containing the isotope to fall to half its initial level",
+          "Half the time it takes for all the atoms in a radioactive sample to completely disappear",
+          "The time it takes for the mass of a block of uranium to halve",
+          "The time taken for a Geiger-M&uuml;ller tube to warm up"
+        ],
+        correct: 0,
+        explanation: "AQA specification exact wording: The half-life of a radioactive isotope is the time it takes for the number of nuclei of the isotope in a sample to halve, or the time it takes for the count rate (or activity) from a sample containing the isotope to fall to half its initial level."
+      },
+      {
+        id: "P4_Q48",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Half-Life & Net Decline Calculations",
+        stem: "Technetium-99m has a half-life of 6.0 hours. A hospital prepares a sample with an initial activity of 800 MBq. What will its activity be after 18 hours?",
+        formulaBox: "Number of half-lives n = Total time / Half-life",
+        options: [
+          "100 MBq",
+          "267 MBq",
+          "200 MBq",
+          "50 MBq"
+        ],
+        correct: 0,
+        explanation: "Number of half-lives n = 18 &divide; 6.0 = 3 half-lives. Halve 3 times: 800 &rarr; 400 (6 h) &rarr; 200 (12 h) &rarr; 100 MBq (18 h)."
+      },
+      {
+        id: "P4_Q49",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Half-Life & Net Decline Calculations",
+        stem: "Look at the count-rate decay data recorded for a radioactive source (background radiation is negligible). What is the HALF-LIFE of this isotope?",
+        formulaBox: "<table class='data-table'><tr><th>Time (days)</th><td>0</td><td>4</td><td>8</td><td>12</td><td>16</td></tr><tr><th>Count-rate (counts/s)</th><td>640</td><td>320</td><td>160</td><td>80</td><td>40</td></tr></table>",
+        options: [
+          "4 days",
+          "8 days",
+          "16 days",
+          "2 days"
+        ],
+        correct: 0,
+        explanation: "The count-rate falls from 640 to 320 (half of 640) in 4 days, and halves again every subsequent 4 days."
+      },
+      {
+        id: "P4_Q50",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Half-Life & Net Decline Calculations",
+        stem: "A radioactive sample has an initial activity of 1200 Bq. After 24 minutes, its activity has fallen to 75 Bq. Calculate the half-life of the sample.",
+        formulaBox: "Count how many halvings reach 75 Bq",
+        options: [
+          "6.0 minutes",
+          "1.5 minutes",
+          "8.0 minutes",
+          "4.0 minutes"
+        ],
+        correct: 0,
+        explanation: "1200 &rarr; 600 (1) &rarr; 300 (2) &rarr; 150 (3) &rarr; 75 Bq (4 half-lives). Half-life = 24 &divide; 4 = 6.0 minutes."
+      },
+      {
+        id: "P4_Q51",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Half-Life & Net Decline Calculations",
+        stem: "A Geiger-M&uuml;ller tube records a total count-rate of 260 counts/min near a radioactive rock. When the rock is removed, the background count-rate is 20 counts/min. If the rock's isotope has a half-life of 10 hours, what TOTAL count-rate will the GM tube record after 20 hours?",
+        formulaBox: "Always subtract background BEFORE halving, then add background back at the end!",
+        options: [
+          "80 counts/min",
+          "65 counts/min",
+          "60 counts/min",
+          "140 counts/min"
+        ],
+        correct: 0,
+        explanation: "Corrected initial count-rate from rock alone = 260 &minus; 20 = 240 counts/min. After 20 hours (2 half-lives): 240 &rarr; 120 &rarr; 60 counts/min. Add constant background back: 60 + 20 = 80 counts/min!"
+      },
+      {
+        id: "P4_Q52",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Half-Life & Net Decline Calculations",
+        stem: "A radioactive isotope undergoes 4 half-lives. Express the NET DECLINE (or remaining fraction as a ratio of final activity to initial activity) as required by the AQA Higher Tier specification.",
+        formulaBox: "Remaining fraction = (1/2)<sup>n</sup>",
+        options: [
+          "Remaining activity is 1/16 of the initial activity (ratio 1 : 16), which is a net decline of 15/16",
+          "Remaining activity is 1/4 of the initial activity (ratio 1 : 4), which is a net decline of 3/4",
+          "Remaining activity is 1/8 of the initial activity (ratio 1 : 8), which is a net decline of 7/8",
+          "Remaining activity is 1/32 of the initial activity (ratio 1 : 32)"
+        ],
+        correct: 0,
+        explanation: "AQA Higher Tier exact requirement: Calculate the net decline, expressed as a ratio, in a radioactive emission after a given number of half-lives. After 4 half-lives: (1/2)<sup>4</sup> = 1/16 remains (ratio 1 : 16), so it has declined by 15/16."
+      },
+      {
+        id: "P4_Q53",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Half-Life & Net Decline Calculations",
+        stem: "Iodine-131 has a half-life of 8 days. What is the ratio of the remaining number of undecayed Iodine-131 nuclei after 24 days to the initial number of nuclei?",
+        formulaBox: "24 days / 8 days = 3 half-lives",
+        options: [
+          "1 : 8",
+          "1 : 3",
+          "1 : 6",
+          "1 : 16"
+        ],
+        correct: 0,
+        explanation: "24 &divide; 8 = 3 half-lives. Fraction remaining = (1/2)<sup>3</sup> = 1/8, so the ratio is 1 : 8."
+      },
+      {
+        id: "P4_Q54",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Half-Life & Net Decline Calculations",
+        stem: "An ancient wooden artefact contains 12.5% (1/8) of the Carbon-14 found in living wood today. If the half-life of Carbon-14 is 5730 years, how old is the wooden artefact?",
+        formulaBox: "Radiocarbon dating",
+        options: [
+          "17,190 years",
+          "11,460 years",
+          "22,920 years",
+          "716 years"
+        ],
+        correct: 0,
+        explanation: "100% &rarr; 50% (1) &rarr; 25% (2) &rarr; 12.5% (3 half-lives). Age = 3 &times; 5730 = 17,190 years."
+      },
+      {
+        id: "P4_Q55",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Half-Life & Net Decline Calculations",
+        stem: "What does a SHORT half-life (e.g. a few seconds or minutes) tell you about a radioactive isotope compared to an isotope with a VERY LONG half-life (e.g. billions of years)?",
+        formulaBox: "Half-life &amp; Stability",
+        options: [
+          "An isotope with a short half-life has much more unstable nuclei that decay very rapidly (giving a high initial activity per kilogram, but the activity drops quickly to safe levels)",
+          "An isotope with a short half-life is completely safe and emits zero radiation",
+          "An isotope with a short half-life has heavier atoms than uranium",
+          "An isotope with a long half-life decays completely in 1 hour"
+        ],
+        correct: 0,
+        explanation: "Short half-life = rapid decay (high initial activity, decays away fast); long half-life = slow decay (remains radioactive for a very long time)."
+      },
+      {
+        id: "P4_Q56",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Half-Life & Net Decline Calculations",
+        stem: "A sample of Phosphorus-32 (half-life = 14 days) currently has an activity of 50 Bq. What was its activity 42 days AGO?",
+        formulaBox: "Working backwards in time (multiply by 2 each half-life)",
+        options: [
+          "400 Bq",
+          "6.25 Bq",
+          "150 Bq",
+          "200 Bq"
+        ],
+        correct: 0,
+        explanation: "42 &divide; 14 = 3 half-lives earlier. Working backwards: 50 &times; 2 &times; 2 &times; 2 = 400 Bq."
+      },
+      {
+        id: "P4_Q57",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Half-Life & Net Decline Calculations",
+        stem: "If you heat a sample of Radium-226 (half-life 1600 years) to 1000 &deg;C and compress it under high pressure, what happens to its half-life?",
+        formulaBox: "Independence of nuclear decay from physical/chemical conditions",
+        options: [
+          "Its half-life stays at 1600 years — radioactive decay occurs inside the nucleus and is completely unaffected by temperature, pressure, or chemical bonding",
+          "Its half-life halves to 800 years because the atoms move faster",
+          "Its half-life doubles to 3200 years",
+          "The radium stops being radioactive"
+        ],
+        correct: 0,
+        explanation: "Unlike chemical reactions, nuclear decay rates and half-lives cannot be changed by heating, cooling, pressure, or chemical reactions."
+      },
+      {
+        id: "P4_Q58",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Half-Life & Net Decline Calculations",
+        stem: "What percentage of the original radioactive nuclei in a sample have DECAYED after 3 half-lives?",
+        formulaBox: "Read carefully: 'decayed' vs. 'remaining'!",
+        options: [
+          "87.5% have decayed (leaving 12.5% undecayed)",
+          "12.5% have decayed (leaving 87.5% undecayed)",
+          "75.0% have decayed",
+          "33.3% have decayed"
+        ],
+        correct: 0,
+        explanation: "After 3 half-lives, 100% &rarr; 50% &rarr; 25% &rarr; 12.5% REMAINS undecayed, which means 100% &minus; 12.5% = 87.5% has DECAYED."
+      },
+      {
+        id: "P4_Q59",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Half-Life & Net Decline Calculations",
+        stem: "When plotting a decay curve of corrected count-rate (y-axis) against time (x-axis) to find half-life, how should you draw the line through the plotted points?",
+        formulaBox: "Graphing radioactive decay data",
+        options: [
+          "Draw a smooth exponential curve of best fit passing evenly through the points (since random fluctuations cause slight scatter around the curve)",
+          "Join consecutive points with sharp straight ruler segments dot-to-dot",
+          "Draw a single straight line of best fit with a ruler",
+          "Draw a horizontal line through the highest point"
+        ],
+        correct: 0,
+        explanation: "Because decay is random, experimental points scatter slightly; a smooth curve of best fit gives the most accurate half-life."
+      },
+      {
+        id: "P4_Q60",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Half-Life & Net Decline Calculations",
+        stem: "A radioactive isotope has a half-life of 20 seconds. At t = 0 s, the sample contains 6.4 &times; 10<sup>12</sup> unstable nuclei. How many unstable nuclei remain after 1.0 minute?",
+        formulaBox: "1.0 minute = 60 seconds = 3 half-lives",
+        options: [
+          "8.0 &times; 10<sup>11</sup> nuclei",
+          "3.2 &times; 10<sup>12</sup> nuclei",
+          "1.6 &times; 10<sup>12</sup> nuclei",
+          "6.4 &times; 10<sup>4</sup> nuclei"
+        ],
+        correct: 0,
+        explanation: "60 &divide; 20 = 3 half-lives. (6.4 &times; 10<sup>12</sup>) &divide; 8 = 0.8 &times; 10<sup>12</sup> = 8.0 &times; 10<sup>11</sup> nuclei."
+      },
+
+      // ========================================================================
+      // 5. CONTAMINATION, IRRADIATION & NUCLEAR FISSION/FUSION (14 Questions)
+      // ========================================================================
+      {
+        id: "P4_Q61",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Radioactive Contamination, Irradiation & Nuclear Fission/Fusion",
+        stem: "What is the exact AQA difference between RADIOACTIVE CONTAMINATION and IRRADIATION?",
+        formulaBox: "Contamination vs. Irradiation (AQA Specification)",
+        options: [
+          "Contamination is the unwanted presence of materials containing radioactive atoms on other materials (the object continues emitting radiation until removed/decayed); Irradiation is exposing an object to nuclear radiation—the irradiated object does NOT become radioactive",
+          "Irradiation makes food and surgical instruments permanently radioactive, whereas contamination is completely harmless",
+          "Contamination only happens with gamma rays, whereas irradiation only happens with alpha particles",
+          "Both terms mean the exact same thing"
+        ],
+        correct: 0,
+        explanation: "AQA specification exact definitions: Radioactive contamination is the unwanted presence of materials containing radioactive atoms on other materials. Irradiation is the process of exposing an object to nuclear radiation. The irradiated object does not become radioactive."
+      },
+      {
+        id: "P4_Q62",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Radioactive Contamination, Irradiation & Nuclear Fission/Fusion",
+        stem: "Fresh strawberries and plastic surgical syringes are often IRRADIATED with gamma rays from Cobalt-60 before packaging. Why is this safe for patients and consumers?",
+        formulaBox: "Sterilisation by gamma irradiation",
+        options: [
+          "The gamma rays kill bacteria and microbes without heating/melting the plastic or fruit, and irradiating an object does NOT make the syringes or strawberries radioactive",
+          "Gamma rays turn into vitamins inside the strawberries",
+          "The syringes only stay radioactive for 5 seconds",
+          "Gamma rays are non-ionising"
+        ],
+        correct: 0,
+        explanation: "Gamma sterilisation penetrates packaging to kill microorganisms, leaving zero radioactive atoms behind."
+      },
+      {
+        id: "P4_Q63",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Radioactive Contamination, Irradiation & Nuclear Fission/Fusion",
+        stem: "State THREE safety precautions a science teacher or radiographer takes when handling sealed radioactive sources in a school or hospital.",
+        formulaBox: "Minimising irradiation &amp; contamination risk",
+        options: [
+          "1. Handle sources with long tongs (increasing distance); 2. Keep exposure time as short as possible and store sources in a lead-lined box when not in use; 3. Never point sources at people (and wear gloves/protective clothing if handling unsealed sources)",
+          "1. Hold sources in bare hands; 2. Store sources in a wooden desk drawer; 3. Look directly into the source opening",
+          "1. Boil the source in water before use; 2. Keep sources on the teacher's desk all day",
+          "1. Wrap the source in a single sheet of tissue paper to block gamma rays"
+        ],
+        correct: 0,
+        explanation: "The three core principles of radiation protection are Time (minimise), Distance (maximise with tongs), and Shielding (lead-lined storage)."
+      },
+      {
+        id: "P4_Q64",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Radioactive Contamination, Irradiation & Nuclear Fission/Fusion",
+        stem: "Why is it vital that scientific findings about the effects of radiation on humans are published and shared with other scientists for PEER REVIEW?",
+        formulaBox: "Working Scientifically — Peer Review",
+        options: [
+          "So independent experts can check the validity of the data, methodology, and conclusions, detect errors or bias, and reproduce results before medical/safety guidelines are adopted",
+          "So scientists can sell radioactive sources to the public",
+          "Because peer review changes the half-life of isotopes",
+          "So results can be kept secret from other countries"
+        ],
+        correct: 0,
+        explanation: "AQA specification exact point: It is important for the findings of studies into the effects of radiation on humans to be published and shared with other scientists so that the findings can be checked by peer review."
+      },
+      {
+        id: "P4_Q65",
+        tiers: ["separate"],
+        isPractical: false,
+        subtopic: "Radioactive Contamination, Irradiation & Nuclear Fission/Fusion",
+        stem: "What is BACKGROUND RADIATION, and what are its main NATURAL and MAN-MADE sources?",
+        formulaBox: "Background radiation (AQA Separate Physics 8463)",
+        options: [
+          "Low-level ionising radiation present around us all the time: Natural sources include radon gas from rocks/soil, cosmic rays from space, rocks/buildings, and food/drink; Man-made sources include medical X-rays/nuclear medicine and nuclear weapons testing/nuclear power fallout",
+          "Radiation emitted only by mobile phones and Wi-Fi routers",
+          "Background radiation comes 100% from nuclear power stations",
+          "Background radiation only exists inside hospitals"
+        ],
+        correct: 0,
+        explanation: "AQA 8463 exact specification: Background radiation is around us all of the time. It comes from natural sources (rocks, cosmic rays from space) and man-made sources (fallout from nuclear weapons testing and nuclear accidents). Radon gas is typically the single largest natural contributor in the UK."
+      },
+      {
+        id: "P4_Q66",
+        tiers: ["separate"],
+        isPractical: true,
+        subtopic: "Radioactive Contamination, Irradiation & Nuclear Fission/Fusion",
+        stem: "What is the SI unit of RADIATION DOSE, and how many millisieverts (mSv) equal 1 sievert (Sv)?",
+        formulaBox: "Radiation dose unit (AQA 8463)",
+        options: [
+          "Sievert (Sv); 1000 mSv = 1 Sv",
+          "Becquerel (Bq); 1000 mBq = 1 Bq",
+          "Gray (Gy); 100 mGy = 1 Gy",
+          "Pascal (Pa); 1000 mPa = 1 Pa"
+        ],
+        correct: 0,
+        explanation: "AQA 8463 specification: Radiation dose is measured in sieverts (Sv). 1000 millisieverts (mSv) = 1 sievert (Sv)."
+      },
+      {
+        id: "P4_Q67",
+        tiers: ["separate"],
+        isPractical: false,
+        subtopic: "Radioactive Contamination, Irradiation & Nuclear Fission/Fusion",
+        stem: "When selecting a radioactive isotope to inject into a patient as a MEDICAL TRACER (e.g. to image kidney or thyroid function with an external gamma camera), what two properties MUST the isotope have?",
+        formulaBox: "Nuclear medicine — Diagnostic tracers (AQA 8463)",
+        options: [
+          "1. Emit GAMMA radiation (so it penetrates out of the body to reach the detector while causing minimal ionisation damage inside tissues); 2. Have a SHORT half-life (e.g. a few hours, so activity is high enough to detect during the scan but decays away rapidly afterwards)",
+          "1. Emit ALPHA radiation; 2. Have a half-life of 1000 years",
+          "1. Emit ALPHA radiation; 2. Have a half-life of 0.01 seconds",
+          "1. Emit BETA radiation; 2. Stay inside the body permanently"
+        ],
+        correct: 0,
+        explanation: "Alpha would never escape the body and would severely damage organs; a multi-year half-life would irradiate the patient unnecessarily for decades."
+      },
+      {
+        id: "P4_Q68",
+        tiers: ["separate"],
+        isPractical: false,
+        subtopic: "Radioactive Contamination, Irradiation & Nuclear Fission/Fusion",
+        stem: "How does external GAMMA RADIOTHERAPY destroy a deep brain tumour while minimising damage to surrounding healthy brain tissue?",
+        formulaBox: "Cancer treatment with ionising radiation (AQA 8463)",
+        options: [
+          "Multiple narrow beams of gamma rays are aimed from different angles around the head so they all intersect on the tumour—giving the tumour a high lethal dose of ionising radiation while any single path through healthy tissue receives only a low dose",
+          "A single huge beam of alpha particles is fired through the skull",
+          "The patient swallows a block of solid uranium",
+          "Gamma rays heal healthy cells and turn them into bone"
+        ],
+        correct: 0,
+        explanation: "Rotating or multi-beam gamma sources focus peak dose at the intersection point (the tumour) while sparing healthy surrounding cells."
+      },
+      {
+        id: "P4_Q69",
+        tiers: ["separate"],
+        isPractical: false,
+        subtopic: "Radioactive Contamination, Irradiation & Nuclear Fission/Fusion",
+        stem: "Describe what happens during NUCLEAR FISSION in a nuclear power station reactor.",
+        formulaBox: "Induced nuclear fission of Uranium-235 or Plutonium-239 (AQA 8463)",
+        options: [
+          "A large, unstable nucleus (such as Uranium-235) absorbs a neutron, becomes highly unstable, and splits into two smaller daughter nuclei roughly equal in size, releasing 2 or 3 neutrons, gamma rays, and kinetic energy",
+          "Two small hydrogen nuclei join together at 15,000,000 &deg;C to form helium",
+          "A uranium nucleus emits a single alpha particle and turns into thorium",
+          "Coal burns in oxygen inside the reactor core"
+        ],
+        correct: 0,
+        explanation: "AQA 8463 exact specification: Nuclear fission is the splitting of a large and unstable nucleus (e.g. uranium or plutonium). Usually for fission to occur the unstable nucleus must first absorb a neutron. The nucleus splitting into two smaller nuclei, roughly equal in size, emits two or three neutrons plus gamma rays. Energy is released by the fission reaction."
+      },
+      {
+        id: "P4_Q70",
+        tiers: ["separate"],
+        isPractical: false,
+        subtopic: "Radioactive Contamination, Irradiation & Nuclear Fission/Fusion",
+        stem: "How is a FISSION CHAIN REACTION controlled inside a nuclear power station so that energy is released at a steady rate rather than exploding like a nuclear weapon?",
+        formulaBox: "Control rods &amp; Moderator (AQA 8463)",
+        options: [
+          "Boron CONTROL RODS are lowered into the reactor core to absorb surplus neutrons so that, on average, only ONE neutron from each fission goes on to cause another fission (while a MODERATOR slows down fast neutrons so U-235 can absorb them)",
+          "Control rods speed up neutrons to 10 times the speed of light",
+          "The reactor is cooled with liquid nitrogen at &minus;200 &deg;C to stop all neutrons",
+          "Control rods emit extra neutrons to multiply the reaction every millisecond"
+        ],
+        correct: 0,
+        explanation: "AQA 8463 specification: The neutrons released may go on to start a chain reaction. The chain reaction is controlled in a nuclear reactor to control the energy released (via neutron-absorbing control rods). The explosion caused by a nuclear weapon is caused by an uncontrolled chain reaction."
+      },
+      {
+        id: "P4_Q71",
+        tiers: ["separate"],
+        isPractical: false,
+        subtopic: "Radioactive Contamination, Irradiation & Nuclear Fission/Fusion",
+        stem: "In what form is the energy released by nuclear fission carried away immediately after the nucleus splits?",
+        formulaBox: "Energy stores in nuclear fission (AQA 8463)",
+        options: [
+          "All of the fission products (the two smaller daughter nuclei and the emitted neutrons) have KINETIC ENERGY (plus gamma radiation), which heats the reactor coolant",
+          "Gravitational potential energy",
+          "Chemical potential energy",
+          "Elastic potential energy"
+        ],
+        correct: 0,
+        explanation: "AQA 8463 exact wording: All of the fission products have kinetic energy."
+      },
+      {
+        id: "P4_Q72",
+        tiers: ["separate"],
+        isPractical: false,
+        subtopic: "Radioactive Contamination, Irradiation & Nuclear Fission/Fusion",
+        stem: "What is NUCLEAR FUSION, and where does it occur naturally?",
+        formulaBox: "Nuclear fusion (AQA Separate Physics 8463)",
+        options: [
+          "The joining of two light nuclei (such as hydrogen isotopes) to form a heavier nucleus (such as helium), releasing huge amounts of energy as some mass is converted into energy; it powers the Sun and all stars",
+          "The splitting of heavy uranium nuclei inside Earth's crust",
+          "The chemical burning of hydrogen gas in oxygen",
+          "The cooling of steam in power station cooling towers"
+        ],
+        correct: 0,
+        explanation: "AQA 8463 exact specification: Nuclear fusion is the joining of two light nuclei to form a heavier nucleus. In this process some of the mass may be converted into the energy of radiation."
+      },
+      {
+        id: "P4_Q73",
+        tiers: ["separate"],
+        isPractical: false,
+        subtopic: "Radioactive Contamination, Irradiation & Nuclear Fission/Fusion",
+        stem: "Why does nuclear fusion require EXTREMELY HIGH TEMPERATURES (millions of degrees Celsius) and EXTREMELY HIGH PRESSURES, making fusion power stations very difficult to build on Earth?",
+        formulaBox: "Overcoming electrostatic repulsion in fusion (AQA 8463)",
+        options: [
+          "Both light nuclei are POSITIVELY CHARGED and strongly repel each other electrostatically—extremely high temperature gives them enough kinetic energy (speed) to overcome this repulsion, and high pressure keeps nuclei close enough for frequent collisions",
+          "Because hydrogen is a solid metal at room temperature",
+          "Because neutrons repel each other magnetically",
+          "Because fusion only happens when nuclei are completely stationary"
+        ],
+        correct: 0,
+        explanation: "Positive + positive electrostatic repulsion must be overcome so nuclei get close enough for the short-range strong nuclear force to fuse them."
+      },
+      {
+        id: "P4_Q74",
+        tiers: ["separate"],
+        isPractical: false,
+        subtopic: "Radioactive Contamination, Irradiation & Nuclear Fission/Fusion",
+        stem: "Why does background radiation dose vary significantly depending on a person's OCCUPATION and LOCATION (e.g. Cornwall vs. London, or airline pilots/astronauts)?",
+        formulaBox: "Factors affecting radiation dose (AQA 8463)",
+        options: [
+          "Granite rocks in regions like Cornwall release more radioactive radon gas, while airline pilots and astronauts fly at high altitudes where the atmosphere is thinner and provides less shielding from cosmic rays",
+          "London has 100 nuclear power stations in the city centre",
+          "Aircraft engines run on Uranium-235 fuel",
+          "Cornwall is closer to the Sun than London"
+        ],
+        correct: 0,
+        explanation: "AQA 8463 exact point: The level of background radiation and radiation dose may be affected by occupation and/or location."
+      }
+    ];
+
+    /* ==========================================================================
+       APPLICATION STATE
+       ========================================================================== */
+    const configState = {
+      studentName: "",
+      studentEmail: "",
+      tier: "higher",         // 'foundation' | 'higher' | 'separate'
+      focus: "all",           // 'all' | 'practicals'
+      questionCount: 20
+    };
+
+    const quizState = {
+      questions: [],
+      currentIndex: 0,
+      answers: [],            // { question, selectedIndex, isCorrect }
+      answeredCurrent: false,
+      isRetryMode: false
+    };
+
+    const TIER_META = {
+      foundation: { name: "Foundation Tier", badge: "Foundation Tier Selected" },
+      higher: { name: "Higher Tier", badge: "Higher Tier Selected" },
+      separate: { name: "Separate Physics", badge: "Separate Physics Selected" }
+    };
+
+    const FOCUS_META = {
+      all: "All Atomic Structure & Radioactivity Topics",
+      practicals: "Calculations, Equations & Half-Life Only"
+    };
+
+    /* ==========================================================================
+       CONFIGURATION SCREEN INTERACTIONS
+       ========================================================================== */
+    function getFilteredPool() {
+      return QUESTION_POOL.filter(q => {
+        const tierMatch = q.tiers.includes(configState.tier);
+        const focusMatch = configState.focus === "all" ? true : q.isPractical === true;
+        return tierMatch && focusMatch;
+      });
+    }
+
+    function updateConfigUI() {
+      ["foundation", "higher", "separate"].forEach(t => {
+        const card = document.getElementById(`tier-card-${t}`);
+        const isSel = configState.tier === t;
+        card.classList.toggle("selected", isSel);
+        card.setAttribute("aria-checked", isSel ? "true" : "false");
+      });
+      document.getElementById("selected-tier-badge").textContent = TIER_META[configState.tier].badge;
+
+      ["all", "practicals"].forEach(f => {
+        const card = document.getElementById(`focus-card-${f}`);
+        const chk = document.getElementById(`focus-check-${f}`);
+        const isSel = configState.focus === f;
+        card.classList.toggle("selected", isSel);
+        card.setAttribute("aria-checked", isSel ? "true" : "false");
+        chk.classList.toggle("hidden", !isSel);
+      });
+
+      document.querySelectorAll(".count-btn").forEach(btn => {
+        const val = Number(btn.getAttribute("data-count"));
+        btn.classList.toggle("active", val === configState.questionCount);
+      });
+
+      const pool = getFilteredPool();
+      const focusSuffix = configState.focus === "practicals" ? " (Calculations & Equations)" : "";
+      document.getElementById("available-q-label").textContent =
+        `${pool.length} unique questions available for ${TIER_META[configState.tier].name}${focusSuffix}`;
+
+      const capBanner = document.getElementById("cap-feedback-banner");
+      const effectiveCount = Math.min(configState.questionCount, pool.length);
+
+      if (configState.questionCount > pool.length) {
+        capBanner.textContent =
+          `Note: ${TIER_META[configState.tier].name}${focusSuffix} has ${pool.length} unique questions in the bank, so your quiz will run all ${pool.length} available unique questions.`;
+        capBanner.classList.remove("hidden");
+      } else {
+        capBanner.classList.add("hidden");
+      }
+
+      document.getElementById("btn-start-quiz").innerHTML =
+        `Start ${TIER_META[configState.tier].name} Quiz (${effectiveCount} Questions) &rarr;`;
+    }
+
+    function selectTier(tierKey) {
+      configState.tier = tierKey;
+      updateConfigUI();
+    }
+
+    function selectFocus(focusKey) {
+      configState.focus = focusKey;
+      updateConfigUI();
+    }
+
+    function selectCount(num) {
+      configState.questionCount = num;
+      updateConfigUI();
+    }
+
+    function shuffleArray(arr) {
+      const copy = [...arr];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    /* Randomises option positions per question instance while tracking the correct answer */
+    function prepareQuestionInstance(qObj) {
+      const indexedOptions = qObj.options.map((text, idx) => ({
+        text,
+        isRight: idx === qObj.correct
+      }));
+      const shuffled = shuffleArray(indexedOptions);
+      return {
+        ...qObj,
+        options: shuffled.map(o => o.text),
+        correct: shuffled.findIndex(o => o.isRight)
+      };
+    }
+
+    function launchConfiguredQuiz() {
+      const nameInput = document.getElementById("student-name");
+      const errorMsg = document.getElementById("name-error-msg");
+      const rawName = nameInput.value.trim();
+
+      if (!rawName) {
+        nameInput.classList.remove("input-error");
+        void nameInput.offsetWidth;
+        nameInput.classList.add("input-error");
+        errorMsg.classList.remove("hidden");
+        nameInput.focus();
+        return;
+      }
+
+      nameInput.classList.remove("input-error");
+      errorMsg.classList.add("hidden");
+
+      configState.studentName = rawName;
+      configState.studentEmail = document.getElementById("student-email").value.trim();
+
+      const pool = shuffleArray(getFilteredPool());
+      const selectedQuestions = pool
+        .slice(0, Math.min(configState.questionCount, pool.length))
+        .map(prepareQuestionInstance);
+
+      quizState.questions = selectedQuestions;
+      quizState.currentIndex = 0;
+      quizState.answers = [];
+      quizState.answeredCurrent = false;
+      quizState.isRetryMode = false;
+
+      switchScreen("view-quiz");
+      document.getElementById("banner-main-title").textContent = "Topic 4: Atomic Structure & Radioactivity";
+      document.getElementById("banner-main-sub").textContent =
+        `${TIER_META[configState.tier].name} • ${FOCUS_META[configState.focus]}`;
+
+      renderActiveQuestion();
+    }
+
+    function startRetryMissed() {
+      const missedQuestions = quizState.answers
+        .filter(item => !item.isCorrect)
+        .map(item => prepareQuestionInstance(item.question));
+
+      if (missedQuestions.length === 0) return;
+
+      quizState.questions = missedQuestions;
+      quizState.currentIndex = 0;
+      quizState.answers = [];
+      quizState.answeredCurrent = false;
+      quizState.isRetryMode = true;
+
+      switchScreen("view-quiz");
+      renderActiveQuestion();
+    }
+
+    function returnToConfig() {
+      switchScreen("view-config");
+      document.getElementById("banner-main-title").textContent = "Configure Your Atomic Structure & Radioactivity Quiz";
+      document.getElementById("banner-main-sub").textContent =
+        "Enter your name, choose your tier, select either all Topic 4 content or Calculations, Equations & Half-Life only, and pick your question count.";
+      updateConfigUI();
+    }
+
+    function switchScreen(activeId) {
+      ["view-config", "view-quiz", "view-report"].forEach(id => {
+        document.getElementById(id).classList.toggle("hidden", id !== activeId);
+      });
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    /* ==========================================================================
+       ACTIVE QUIZ RENDERING & LOGIC
+       ========================================================================== */
+    function renderActiveQuestion() {
+      const total = quizState.questions.length;
+      const idx = quizState.currentIndex;
+      const qObj = quizState.questions[idx];
+      quizState.answeredCurrent = false;
+
+      document.getElementById("hud-student-pill").textContent = configState.studentName;
+      document.getElementById("hud-tier-pill").textContent = TIER_META[configState.tier].name;
+      document.getElementById("hud-focus-pill").textContent = FOCUS_META[configState.focus];
+      document.getElementById("hud-retry-pill").classList.toggle("hidden", !quizState.isRetryMode);
+
+      const scoreSoFar = quizState.answers.filter(a => a.isCorrect).length;
+      document.getElementById("hud-live-score").textContent = `Score: ${scoreSoFar} / ${quizState.answers.length}`;
+      document.getElementById("hud-counter").textContent = `Question ${idx + 1} of ${total}`;
+
+      const pct = Math.round((idx / total) * 100);
+      document.getElementById("quiz-progress-fill").style.width = `${pct}%`;
+
+      const kickerEl = document.getElementById("q-kicker-label");
+      kickerEl.innerHTML = `<span>Question ${idx + 1} of ${total} &bull; ${qObj.subtopic}</span>` +
+        (qObj.isPractical ? `<span class="rp-badge">EQUATION / CALCULATION</span>` : "");
+
+      document.getElementById("q-stem-text").innerHTML = qObj.stem;
+
+      const formulaBox = document.getElementById("q-formula-box");
+      if (qObj.formulaBox) {
+        formulaBox.innerHTML = qObj.formulaBox;
+        formulaBox.classList.remove("hidden");
+      } else {
+        formulaBox.classList.add("hidden");
+      }
+
+      const optionsContainer = document.getElementById("quiz-options-list");
+      optionsContainer.innerHTML = "";
+      const letters = ["A", "B", "C", "D"];
+
+      qObj.options.forEach((optText, optIdx) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "opt-btn";
+        btn.innerHTML = `
+          <span class="opt-letter">${letters[optIdx]}</span>
+          <span>${optText}</span>
+        `;
+        btn.addEventListener("click", () => submitOption(optIdx));
+        optionsContainer.appendChild(btn);
+      });
+
+      const fbPanel = document.getElementById("quiz-feedback-panel");
+      fbPanel.className = "feedback-panel hidden";
+
+      const nextBtn = document.getElementById("btn-next-question");
+      nextBtn.classList.add("hidden");
+      nextBtn.innerHTML = idx === total - 1 ? "View Diagnostic Report &rarr;" : "Next Question &rarr;";
+    }
+
+    function submitOption(selectedIdx) {
+      if (quizState.answeredCurrent) return;
+      quizState.answeredCurrent = true;
+
+      const qObj = quizState.questions[quizState.currentIndex];
+      const isCorrect = selectedIdx === qObj.correct;
+
+      quizState.answers.push({
+        question: qObj,
+        selectedIndex: selectedIdx,
+        isCorrect: isCorrect
+      });
+
+      const scoreSoFar = quizState.answers.filter(a => a.isCorrect).length;
+      document.getElementById("hud-live-score").textContent = `Score: ${scoreSoFar} / ${quizState.answers.length}`;
+
+      const total = quizState.questions.length;
+      const donePct = Math.round(((quizState.currentIndex + 1) / total) * 100);
+      document.getElementById("quiz-progress-fill").style.width = `${donePct}%`;
+
+      const optionBtns = document.querySelectorAll("#quiz-options-list .opt-btn");
+      optionBtns.forEach((btn, idx) => {
+        btn.disabled = true;
+        if (idx === qObj.correct) {
+          btn.classList.add("correct");
+        } else if (idx === selectedIdx && !isCorrect) {
+          btn.classList.add("incorrect");
+        } else {
+          btn.classList.add("dimmed");
+        }
+      });
+
+      const fbPanel = document.getElementById("quiz-feedback-panel");
+      const fbStatus = document.getElementById("fb-status-text");
+      const fbInsight = document.getElementById("fb-insight-text");
+
+      fbPanel.classList.remove("hidden", "fb-pass", "fb-fail");
+      if (isCorrect) {
+        fbPanel.classList.add("fb-pass");
+        fbStatus.textContent = "✓ Correct — Full Marks!";
+      } else {
+        fbPanel.classList.add("fb-fail");
+        const correctLetter = ["A", "B", "C", "D"][qObj.correct];
+        fbStatus.textContent = `✗ Incorrect — Correct Answer: Option ${correctLetter}`;
+      }
+      fbInsight.innerHTML = qObj.explanation;
+
+      document.getElementById("btn-next-question").classList.remove("hidden");
+    }
+
+    function advanceQuestion() {
+      if (quizState.currentIndex < quizState.questions.length - 1) {
+        quizState.currentIndex++;
+        renderActiveQuestion();
+      } else {
+        showDiagnosticReport();
+      }
+    }
+
+    /* ==========================================================================
+       DIAGNOSTIC RESULTS DASHBOARD
+       ========================================================================== */
+    function showDiagnosticReport() {
+      switchScreen("view-report");
+      document.getElementById("banner-main-title").textContent = "Topic 4 Diagnostic Performance Report";
+      document.getElementById("banner-main-sub").textContent =
+        `Completed by ${configState.studentName}${configState.studentEmail ? ` (${configState.studentEmail})` : ""} • ${TIER_META[configState.tier].name} • ${FOCUS_META[configState.focus]}`;
+
+      const total = quizState.answers.length;
+      const correct = quizState.answers.filter(a => a.isCorrect).length;
+      const missed = total - correct;
+      const pct = Math.round((correct / total) * 100);
+
+      document.getElementById("rep-student-header").textContent =
+        `${configState.studentName} • ${TIER_META[configState.tier].name} • ${FOCUS_META[configState.focus]}${quizState.isRetryMode ? " (Retry Round)" : ""}`;
+      document.getElementById("rep-pct-val").textContent = `${pct}%`;
+      document.getElementById("rep-frac-val").textContent = `(${correct} / ${total})`;
+      document.getElementById("rep-grade-pill").textContent = estimateAqaGrade(pct, configState.tier);
+
+      const msgEl = document.getElementById("rep-msg-text");
+      if (pct === 100) {
+        msgEl.textContent = `Outstanding work, ${configState.studentName}! You scored 100% across every question. Your AQA Topic 4 Atomic Structure & Radioactivity knowledge and equation skills are exam-ready.`;
+      } else if (pct >= 80) {
+        msgEl.textContent = `Strong performance, ${configState.studentName}! You have a solid command of Atomic Structure & Radioactivity. Click 'Retry Missed Questions' below to master the final ${missed} question${missed === 1 ? "" : "s"}.`;
+      } else if (pct >= 50) {
+        msgEl.textContent = `Good progress, ${configState.studentName}! Review the amber and red sub-topics below, study the AQA Examiner Insights, and retry your missed questions to push into the top grade boundaries.`;
+      } else {
+        msgEl.textContent = `Great active recall practice, ${configState.studentName}! Focus on the Priority Focus sub-topics in red below, read the tailored AQA revision guidance, and retry your missed questions.`;
+      }
+
+      const retryBtn = document.getElementById("btn-retry-missed");
+      if (missed > 0) {
+        retryBtn.classList.remove("hidden");
+        retryBtn.textContent = `Retry Missed Questions (${missed})`;
+      } else {
+        retryBtn.classList.add("hidden");
+      }
+
+      const topicMap = {};
+      quizState.answers.forEach(entry => {
+        const t = entry.question.subtopic;
+        if (!topicMap[t]) topicMap[t] = { correct: 0, total: 0 };
+        topicMap[t].total++;
+        if (entry.isCorrect) topicMap[t].correct++;
+      });
+
+      const masteryGrid = document.getElementById("rep-mastery-grid");
+      masteryGrid.innerHTML = "";
+
+      Object.keys(topicMap).forEach(topicName => {
+        const { correct: c, total: t } = topicMap[topicName];
+        const subPct = Math.round((c / t) * 100);
+
+        let chipClass = "sc-weak";
+        let fillClass = "fill-r";
+        let statusLabel = "Priority Focus";
+
+        if (subPct >= 80) {
+          chipClass = "sc-strong";
+          fillClass = "fill-g";
+          statusLabel = "Strong Area";
+        } else if (subPct >= 50) {
+          chipClass = "sc-dev";
+          fillClass = "fill-a";
+          statusLabel = "Developing";
+        }
+
+        const tip = subPct >= 80
+          ? "Secure understanding demonstrated—maintain with spaced active recall."
+          : (SUBTOPIC_GUIDANCE[topicName] || "Review examiner insights and retry missed questions in this sub-topic.");
+
+        const card = document.createElement("div");
+        card.className = "mastery-item";
+        card.innerHTML = `
+          <div class="mastery-item-top">
+            <span class="mastery-name">${topicName}</span>
+            <div class="mastery-right">
+              <span class="status-chip ${chipClass}">${statusLabel}</span>
+              <span style="font-size:0.84rem; font-weight:700; color:var(--slate-700);">${c}/${t} (${subPct}%)</span>
+            </div>
+          </div>
+          <div class="mastery-bar-track">
+            <div class="mastery-bar-fill ${fillClass}" style="width: ${subPct}%"></div>
+          </div>
+          <div class="mastery-tip">${tip}</div>
+        `;
+        masteryGrid.appendChild(card);
+      });
+
+      const reviewList = document.getElementById("rep-review-list");
+      reviewList.innerHTML = "";
+      reviewList.classList.add("hidden");
+      document.getElementById("btn-toggle-review").textContent = "Show Full Question-by-Question Review";
+
+      const letters = ["A", "B", "C", "D"];
+      quizState.answers.forEach((entry, idx) => {
+        const q = entry.question;
+        const userAns = `${letters[entry.selectedIndex]}. ${q.options[entry.selectedIndex]}`;
+        const rightAns = `${letters[q.correct]}. ${q.options[q.correct]}`;
+
+        const item = document.createElement("div");
+        item.className = `review-card ${entry.isCorrect ? "rc-ok" : "rc-bad"}`;
+        item.innerHTML = `
+          <div class="rc-kicker">Question ${idx + 1} &bull; ${q.subtopic} &bull; ${entry.isCorrect ? "Correct" : "Incorrect"}</div>
+          <div class="rc-q">${q.stem}</div>
+          <div class="rc-ans"><strong>Your Answer:</strong> <span style="color:${entry.isCorrect ? "var(--emerald-700)" : "var(--rose-600)"}; font-weight:600;">${userAns}</span></div>
+          ${!entry.isCorrect ? `<div class="rc-ans"><strong>Correct Answer:</strong> <span style="color:var(--emerald-700); font-weight:600;">${rightAns}</span></div>` : ""}
+          <div class="rc-exp"><strong>AQA Examiner Insight:</strong> ${q.explanation}</div>
+        `;
+        reviewList.appendChild(item);
+      });
+    }
+
+    function estimateAqaGrade(pct, tier) {
+      if (tier === "foundation") {
+        if (pct >= 80) return "Estimated AQA Indicator: Grade 4–5 (Maximum Foundation)";
+        if (pct >= 62) return "Estimated AQA Indicator: Grade 4 (Standard Pass)";
+        if (pct >= 45) return "Estimated AQA Indicator: Grade 3";
+        return "Estimated AQA Indicator: Grade 1–2 (Keep Practising)";
+      }
+      if (pct >= 80) return "Estimated AQA Indicator: Grade 8–9";
+      if (pct >= 65) return "Estimated AQA Indicator: Grade 6–7";
+      if (pct >= 48) return "Estimated AQA Indicator: Grade 4–5";
+      return "Estimated AQA Indicator: Grade 3 / Below (Target Revision)";
+    }
+
+    function toggleReviewSection() {
+      const list = document.getElementById("rep-review-list");
+      const btn = document.getElementById("btn-toggle-review");
+      const isHidden = list.classList.toggle("hidden");
+      btn.textContent = isHidden ? "Show Full Question-by-Question Review" : "Hide Full Question-by-Question Review";
+      if (!isHidden) {
+        list.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    /* ==========================================================================
+       KEYBOARD SHORTCUTS & INITIALISATION
+       ========================================================================== */
+    document.getElementById("student-name").addEventListener("input", function () {
+      if (this.value.trim()) {
+        this.classList.remove("input-error");
+        document.getElementById("name-error-msg").classList.add("hidden");
+      }
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (document.getElementById("view-quiz").classList.contains("hidden")) return;
+      const key = e.key.toUpperCase();
+      if (!quizState.answeredCurrent) {
+        if (key === "1" || key === "A") submitOption(0);
+        else if (key === "2" || key === "B") submitOption(1);
+        else if (key === "3" || key === "C") submitOption(2);
+        else if (key === "4" || key === "D") submitOption(3);
+      } else if (e.key === "Enter") {
+        e.preventDefault();
+        advanceQuestion();
+      }
+    });
+
+    updateConfigUI();
+  </script>
+</body>
+</html>
